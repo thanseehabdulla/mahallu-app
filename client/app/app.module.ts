@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, HttpModule, FormsModule,MyDatePickerModule,AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
     }),RouterModule.forRoot(appRoutes)],
-  declarations: [AppComponent, TasksComponent,CustomerComponent,AdminComponent,pageNotFoundComponent],
+  declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent],
    providers: [
     AuthService,
     CanActivateViaAuthGuard,ConfirmDeactivateGuard,CanActivateViaAuthGuardAdmin
