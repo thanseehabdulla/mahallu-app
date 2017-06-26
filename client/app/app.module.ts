@@ -15,8 +15,48 @@ import {CanActivateViaAuthGuardAdmin} from './components/security/auth.guard.adm
 import {ConfirmDeactivateGuard} from './components/security/auth.deguard'
 import {AuthService} from './components/security/auth.service'
 
+// updated routes
+import {CharityComponent} from './components/charity/charity.component'
+import {ClientComponent} from './components/clientdetails/client.component'
+import {FamilydetailComponent} from './components/familydetails/familydetail.component'
+import {MarriageCertificateComponent} from './components/marriagecertificate/marriagecertificate.component'
+import {MiscellanousComponent} from './components/miscellanous/miscellanous.component'
+import {MoludComponent} from './components/molud/molud.component'
+import {NotificationComponent} from './components/notification/notification.component'
+import {PerunaalComponent} from './components/perunaal/perunaal.component'
+import {RathibComponent} from './components/rathib/rathib.component'
+import {VarasangyaComponent} from './components/varasangya/varasangya.component'
+
+
 const appRoutes: Routes = [
 
+  { path: 'charity',      component: CharityComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'client',      component: ClientComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'familydetail',      component: FamilydetailComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'marriagecertificate',      component: MarriageCertificateComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'miscellanous',      component: MiscellanousComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'notification',      component: NotificationComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'perunaal',      component: PerunaalComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'rathib',      component: RathibComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
+  { path: 'varasangya',      component: VarasangyaComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
   { path: 'admin',      component: AdminComponent, canActivate: [
     CanActivateViaAuthGuardAdmin
   ] },
@@ -36,7 +76,7 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, HttpModule, FormsModule,MyDatePickerModule,AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
     }),RouterModule.forRoot(appRoutes)],
-  declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent,CommiteComponent],
+  declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent,CommiteComponent,CharityComponent,ClientComponent,FamilydetailComponent,MarriageCertificateComponent,MiscellanousComponent,MoludComponent,NotificationComponent,PerunaalComponent,RathibComponent,VarasangyaComponent],
    providers: [
     AuthService,
     CanActivateViaAuthGuard,ConfirmDeactivateGuard,CanActivateViaAuthGuardAdmin

@@ -15,7 +15,7 @@ import {Base64} from 'js-base64';
   templateUrl: './molud.component.html',
 })
 
-export class CharityComponent implements OnInit{ 
+export class MoludComponent implements OnInit{ 
 
  
 
