@@ -14,45 +14,23 @@ var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
-var TasksComponent = (function () {
-    function TasksComponent(router, http) {
+var CommiteComponent = (function () {
+    function CommiteComponent(router, http) {
         this.router = router;
         this.http = http;
     }
     // on initialization 
-    TasksComponent.prototype.ngOnInit = function () {
-        // if(sessionStorage.getItem('User')=='admin'){
-        //      this.router.navigate(['/admin']);
-        //         }
-        //      else if(sessionStorage.getItem('User')=='commite'){
-        //         this.router.navigate(['/commite']);
-        //      }
+    CommiteComponent.prototype.ngOnInit = function () {
     };
-    // on login button press
-    TasksComponent.prototype.onLogin = function () {
-        console.log('reached login');
-        // if admin
-        if (this.name == 'admin') {
-            // redirect
-            sessionStorage.setItem('User', this.name);
-            this.router.navigate(['/admin']);
-        }
-        else {
-            // if users
-            // redirect
-            sessionStorage.setItem('User', this.name);
-            this.router.navigate(['/commite']);
-        }
-    };
-    return TasksComponent;
+    return CommiteComponent;
 }());
-TasksComponent = __decorate([
+CommiteComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'login',
-        templateUrl: './login.component.html',
+        selector: 'comimite',
+        templateUrl: './commite.component.html',
     }),
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
-], TasksComponent);
-exports.TasksComponent = TasksComponent;
-//# sourceMappingURL=login.component.js.map
+], CommiteComponent);
+exports.CommiteComponent = CommiteComponent;
+//# sourceMappingURL=commite.component.js.map

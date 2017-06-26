@@ -4,6 +4,7 @@ import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {TasksComponent} from './components/login/login.component';
+import {CommiteComponent} from './components/commite/commite.component'
 import {AdminComponent} from './components/admin/admin.component'
 import { MyDatePickerModule } from 'mydatepicker';
 import { AgmCoreModule } from 'angular2-google-maps/core';
@@ -19,6 +20,9 @@ const appRoutes: Routes = [
   { path: 'admin',      component: AdminComponent, canActivate: [
     CanActivateViaAuthGuardAdmin
   ] },
+  { path: 'commite',      component: CommiteComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
   { path: 'login',      component: TasksComponent },
   { path: '',
     redirectTo: '/login',
@@ -32,7 +36,7 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, HttpModule, FormsModule,MyDatePickerModule,AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
     }),RouterModule.forRoot(appRoutes)],
-  declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent],
+  declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent,CommiteComponent],
    providers: [
     AuthService,
     CanActivateViaAuthGuard,ConfirmDeactivateGuard,CanActivateViaAuthGuardAdmin

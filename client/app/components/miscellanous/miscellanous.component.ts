@@ -11,11 +11,11 @@ import {Base64} from 'js-base64';
 
 @Component({
   moduleId: module.id,
-  selector: 'comimite',
-  templateUrl: './commite.component.html',
+  selector: 'miscellanous',
+  templateUrl: './miscellanous.component.html',
 })
 
-export class CommiteComponent implements OnInit{ 
+export class MiscellanousComponent implements OnInit{ 
 
  
 

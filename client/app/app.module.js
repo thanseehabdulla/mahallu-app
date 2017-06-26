@@ -12,6 +12,7 @@ var http_1 = require("@angular/http");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./components/login/login.component");
+var commite_component_1 = require("./components/commite/commite.component");
 var admin_component_1 = require("./components/admin/admin.component");
 var mydatepicker_1 = require("mydatepicker");
 var core_2 = require("angular2-google-maps/core");
@@ -23,6 +24,9 @@ var auth_deguard_1 = require("./components/security/auth.deguard");
 var auth_service_1 = require("./components/security/auth.service");
 var appRoutes = [
     { path: 'admin', component: admin_component_1.AdminComponent, canActivate: [
+            auth_guard_admin_1.CanActivateViaAuthGuardAdmin
+        ] },
+    { path: 'commite', component: commite_component_1.CommiteComponent, canActivate: [
             auth_guard_admin_1.CanActivateViaAuthGuardAdmin
         ] },
     { path: 'login', component: login_component_1.TasksComponent },
@@ -42,7 +46,7 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, mydatepicker_1.MyDatePickerModule, core_2.AgmCoreModule.forRoot({
                 apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
             }), router_1.RouterModule.forRoot(appRoutes)],
-        declarations: [app_component_1.AppComponent, login_component_1.TasksComponent, admin_component_1.AdminComponent, pagenotfound_component_1.pageNotFoundComponent],
+        declarations: [app_component_1.AppComponent, login_component_1.TasksComponent, admin_component_1.AdminComponent, pagenotfound_component_1.pageNotFoundComponent, commite_component_1.CommiteComponent],
         providers: [
             auth_service_1.AuthService,
             auth_guard_1.CanActivateViaAuthGuard, auth_deguard_1.ConfirmDeactivateGuard, auth_guard_admin_1.CanActivateViaAuthGuardAdmin

@@ -35,32 +35,39 @@ export class TasksComponent implements OnInit{
     
     // on initialization 
     ngOnInit(){
-if(sessionStorage.getItem('User')=='admin'){
+// if(sessionStorage.getItem('User')=='admin'){
      
-     this.router.navigate(['/admin']);
+//      this.router.navigate(['/admin']);
 
-        }
-     else if(sessionStorage.getItem('User')=='commite'){
-        this.router.navigate(['/commite']);
-     }
+//         }
+//      else if(sessionStorage.getItem('User')=='commite'){
+//         this.router.navigate(['/commite']);
+//      }
 
     }
 
     
 // on login button press
 onLogin(){
-
+    
+console.log('reached login')
        // if admin
 
           if(this.name == 'admin'){
-
+                 
+                 // redirect
+                    sessionStorage.setItem('User',this.name)
+                    this.router.navigate(['/admin']);  
 
 
 
           }else{
 
             // if users
-
+                    
+                    // redirect
+                    sessionStorage.setItem('User',this.name)
+                    this.router.navigate(['/commite']);  
 
 
 
