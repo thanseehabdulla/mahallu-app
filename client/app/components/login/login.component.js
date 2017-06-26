@@ -28,9 +28,9 @@ TasksComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'login',
-        templateUrl: './tasks.component.html',
+        templateUrl: './login.component.html',
     }),
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
 ], TasksComponent);
 exports.TasksComponent = TasksComponent;
-//# sourceMappingURL=tasks.component.js.map
+//# sourceMappingURL=login.component.js.map

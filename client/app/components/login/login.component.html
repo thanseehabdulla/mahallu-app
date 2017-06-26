@@ -1,0 +1,39 @@
+<div class="alert alert-dismissible alert-success">
+  <h1 style="margin: 10px 390px 10px 510px;height:5%">E-Mahalu App</h1>
+    
+</div>
+
+
+<div class="col-lg-4" id="alerttag" style="width: 100%;display:none;">
+            <div class="bs-component">
+              <div class="alert alert-dismissible alert-danger">
+                <button type="button" class="close" data-dismiss="alert" (click)="dismiss()">×</button>
+                <strong>Incorrect username/password</strong> <span  class="alert-link"> &nbsp; Change a few things up</span> and try submitting again.
+              </div>
+            </div>
+          </div>
+<div class="jumbotron" style="height: 95%">
+ 
+   <div>
+    <div >
+                <div class="panel panel-info" style="margin: 0px 190px 0px 400px;max-width: 450px">
+           
+                     <div class="panel-heading">
+                      <h3 class="panel-title" style="text-align: center">Login</h3>
+                      </div>
+                      <div class="panel-body">
+                      <input type="text" class="form-control" id="inputError" placeholder="Name" [(ngModel)]="name">
+                      <br/>
+                      <input type="password" class="form-control" id="inputError" placeholder="Password" [(ngModel)]="password">
+                      </div>
+                </div>
+        
+     <button class="btn btn-success" style="margin: 10px 10px 20px 600px" (click)="onLogin()">Login</button>
+        
+     <div>
+
+</div>
+
+</div>
+
+ 

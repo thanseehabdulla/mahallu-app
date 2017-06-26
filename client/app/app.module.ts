@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpModule} from '@angular/http';
 import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
-import {TasksComponent} from './components/tasks/tasks.component';
+import {TasksComponent} from './components/login/login.component';
 import {AdminComponent} from './components/admin/admin.component'
 import { MyDatePickerModule } from 'mydatepicker';
 import { AgmCoreModule } from 'angular2-google-maps/core';

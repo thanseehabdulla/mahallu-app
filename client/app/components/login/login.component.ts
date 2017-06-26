@@ -12,12 +12,16 @@ import {Base64} from 'js-base64';
 @Component({
   moduleId: module.id,
   selector: 'login',
-  templateUrl: './tasks.component.html',
+  templateUrl: './login.component.html',
 })
 
 export class TasksComponent implements OnInit{ 
 
-
+    public name:any;
+    public password:any;
+    public registration:any;
+    public access_token:any;
+    public refresh_token:any;
 
 
     
@@ -29,13 +33,41 @@ export class TasksComponent implements OnInit{
     
     
     
-    // on init
+    // on initialization 
     ngOnInit(){
+if(sessionStorage.getItem('User')=='admin'){
+     
+     this.router.navigate(['/admin']);
 
+        }
+     else if(sessionStorage.getItem('User')=='commite'){
+        this.router.navigate(['/commite']);
+     }
 
     }
 
     
+// on login button press
+onLogin(){
+
+       // if admin
+
+          if(this.name == 'admin'){
+
+
+
+
+          }else{
+
+            // if users
+
+
+
+
+
+
+              }  
+}
 
   
 }
