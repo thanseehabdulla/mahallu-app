@@ -31,6 +31,69 @@ var AdminComponent = (function () {
     };
     AdminComponent.prototype.reInitDatatable = function () {
     };
+    // main menu
+    // about function
+    AdminComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    AdminComponent.prototype.instruction = function () {
+    };
+    // setting function
+    AdminComponent.prototype.setting = function () {
+    };
+    // help
+    AdminComponent.prototype.help = function () {
+    };
+    // report us
+    AdminComponent.prototype.report = function () {
+    };
+    // Logout
+    AdminComponent.prototype.Logout = function () {
+    };
+    // panel items
+    // home
+    AdminComponent.prototype.home = function () {
+        this.router.navigate(['/admin']);
+    };
+    AdminComponent.prototype.addmember = function () {
+        this.router.navigate(['/client']);
+    };
+    AdminComponent.prototype.inbox = function () {
+        // class disabled
+    };
+    AdminComponent.prototype.varasangya = function () {
+        this.router.navigate(['/varasangya']);
+    };
+    AdminComponent.prototype.eidsangya = function () {
+        this.router.navigate(['/perunaal']);
+    };
+    AdminComponent.prototype.moludsangya = function () {
+        this.router.navigate(['/molud']);
+    };
+    AdminComponent.prototype.rathibsangya = function () {
+        this.router.navigate(['/rathib']);
+    };
+    AdminComponent.prototype.charitysangya = function () {
+        this.router.navigate(['/charity']);
+    };
+    AdminComponent.prototype.miscellanous = function () {
+        this.router.navigate(['/miscellanous']);
+    };
+    AdminComponent.prototype.madrass = function () {
+        // currently disabled
+    };
+    AdminComponent.prototype.onlinetranscation = function () {
+        // currently disabled
+    };
+    AdminComponent.prototype.Sendnotification = function () {
+        this.router.navigate(['/notification']);
+    };
+    AdminComponent.prototype.marriagecertificate = function () {
+        this.router.navigate(['/marriagecertificate']);
+    };
+    AdminComponent.prototype.gallery = function () {
+        // currently disabled
+    };
     return AdminComponent;
 }());
 AdminComponent = __decorate([

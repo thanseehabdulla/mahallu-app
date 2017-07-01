@@ -22,6 +22,30 @@ var ClientComponent = (function () {
     // on initialization 
     ClientComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    ClientComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    ClientComponent.prototype.instruction = function () {
+    };
+    // setting function
+    ClientComponent.prototype.setting = function () {
+    };
+    // help
+    ClientComponent.prototype.help = function () {
+    };
+    // report us
+    ClientComponent.prototype.report = function () {
+    };
+    // Logout
+    ClientComponent.prototype.Logout = function () {
+    };
+    // functionalities
+    ClientComponent.prototype.addmember = function () {
+    };
+    ClientComponent.prototype.memberlist = function () {
+    };
     return ClientComponent;
 }());
 ClientComponent = __decorate([

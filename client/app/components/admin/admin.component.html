@@ -1,8 +1,8 @@
 
-<div class="container">
+<div class="container" style="width: 100%">
     <div class="row">
         <div class="col-xs-12">
-            <nav class="navbar navbar-inverse " style="background-color: black">
+            <nav class="navbar navbar-inverse ">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="true">
@@ -16,13 +16,13 @@
 
     <div class="navbar-collapse collapse in" id="bs-example-navbar-collapse-2" aria-expanded="true">
       <ul class="nav navbar-nav">
-      <li><a href="#">About Mahalu App</a></li>
-      <li><a href="#">Instruction</a></li>
+      <li><a (click)="aboutmahal()">About Mahalu App</a></li>
+      <li><a href="instruction()">Instruction</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Setting <span class="caret"></span></a>
+          <a href="setting()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Setting <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Report us</a></li>
+            <li><a href="help()">Help</a></li>
+            <li><a href="reportus()">Report us</a></li>
             </ul>
         </li>
           <li class="dropdown">
@@ -32,7 +32,7 @@
             <li><a href="#">Malayalam</a></li>
             </ul>
         </li>
-      <li><a href="#">Logout</a></li>
+      <li><a href="Logout()">Logout</a></li>
       </ul>
      </div>
   </div>
@@ -47,28 +47,30 @@
     <div class="row">
         <div class="col-xs-3">
             <ul class="nav nav-pills nav-stacked">
-  <li class="active"><a href="#">Home</a></li>
-  <li><a href="#">Add Member</a></li>
-  <li><a href="#">Inbox</a></li>
-  <li><a href="#">Vara sangya</a></li>
-  <li><a href="#">Eid sangya</a></li> 
-   <li><a href="#">Molud sangya</a></li>
-   <li><a href="#">Rathib sangya</a></li>
-    <li><a href="#">Charity sangya</a></li>
-     <li><a href="#">Miscellanous</a></li>
-      <li><a href="#">Madrass</a></li>
-        <li><a href="#">Online Transaction</a></li>
-       <li><a href="#">Send Notification</a></li>
-        <li><a href="#">Marriage Certificate</a></li> 
-        <li><a href="#">Gallery</a></li> 
+  <li class="active"><a (click)="home()">Home</a></li>
+  <li><a (click)="addmember()">Members</a></li>
+  <li class="disabled"><a (click)="inbox()" disabled>Inbox</a></li>
+  <li><a (click)="varasangya()">Vara sangya</a></li>
+  <li><a (click)="eidsangya()">Eid sangya</a></li> 
+   <li><a (click)="moludsangya()">Molud sangya</a></li>
+   <li><a (click)="rathibsangya()">Rathib sangya</a></li>
+    <li><a (click)="charitysangya()">Charity sangya</a></li>
+     <li><a (click)="miscellanous()">Miscellanous</a></li>
+      <li class="disabled"><a (click)="madrass()">Madrass</a></li>
+        <li class="disabled"><a (click)="onlinetransaction()">Online Transaction</a></li>
+       <li><a (click)="Sendnotification()">Send Notification</a></li>
+        <li><a (click)="marriagecertificate()">Marriage Certificate</a></li> 
+        <li class="disabled"><a (click)="gallery()">Gallery</a></li> 
          
 
 
 </ul>
         </div>
         <div class="col-xs-9">
-            
-<div class="jumbotron" style="margin: 10% 0% 0% 0%">
+            <ul class="breadcrumb">
+  <li class="active">Home</li>
+</ul>
+<div class="jumbotron" style="margin: 5% 0% 0% 0%">
   <h1><b>Welcome to Mahallu App</b></h1>
   <p style="position: relative;left:5%">"Lets make Electronic tracking of data between commitee and members Easier"</p>
  <div align="left">

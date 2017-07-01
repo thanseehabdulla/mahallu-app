@@ -10,8 +10,8 @@ import {API} from './../../api_config/api_config';
 import {Base64} from 'js-base64';
 
 import "jquery";
-import 'datatables.net';
 
+import 'datatables.net';
 
 
 
@@ -64,7 +64,104 @@ ngAfterViewInit() {
 
     }
 
-     
+
+// main menu
+  // about function
+    aboutmahal(){
+
+    }  
+
+  //instruction function 
+  instruction(){
+
+  }
+
+ // setting function
+ setting(){
+
+ }
+
+// help
+help(){
+
+}
+
+// report us
+report(){
+
+}
+
+// Logout
+Logout(){
+
+}
+
+
+
+// panel items
+
+// home
+
+home(){
+this.router.navigate(['/admin']); 
+}
+
+addmember()
+{
+this.router.navigate(['/client']); 
+}
+
+inbox(){
+// class disabled
+}
+
+varasangya(){
+this.router.navigate(['/varasangya']); 
+}
+
+eidsangya(){
+this.router.navigate(['/perunaal']); 
+}
+
+moludsangya()
+{
+this.router.navigate(['/molud']); 
+}
+
+
+rathibsangya(){
+this.router.navigate(['/rathib']); 
+}
+
+
+charitysangya(){
+this.router.navigate(['/charity']); 
+}
+
+miscellanous(){
+this.router.navigate(['/miscellanous']); 
+}
+
+madrass(){
+// currently disabled
+}
+
+onlinetranscation(){
+// currently disabled
+}
+
+Sendnotification(){
+this.router.navigate(['/notification']); 
+}
+
+marriagecertificate(){
+this.router.navigate(['/marriagecertificate']); 
+}
+
+gallery(){
+// currently disabled
+}
+
 
 
 }

@@ -33,6 +33,9 @@ const appRoutes: Routes = [
   { path: 'charity',      component: CharityComponent, canActivate: [
     CanActivateViaAuthGuardAdmin
   ] },
+  { path: 'molud',      component: MoludComponent, canActivate: [
+    CanActivateViaAuthGuardAdmin
+  ] },
   { path: 'client',      component: ClientComponent, canActivate: [
     CanActivateViaAuthGuardAdmin
   ] },
@@ -68,6 +71,7 @@ const appRoutes: Routes = [
     redirectTo: '/login',
     pathMatch: 'full'
   },
+  
   { path: '**', component: pageNotFoundComponent }
 ];
 

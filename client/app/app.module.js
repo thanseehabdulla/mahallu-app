@@ -37,6 +37,9 @@ var appRoutes = [
     { path: 'charity', component: charity_component_1.CharityComponent, canActivate: [
             auth_guard_admin_1.CanActivateViaAuthGuardAdmin
         ] },
+    { path: 'molud', component: molud_component_1.MoludComponent, canActivate: [
+            auth_guard_admin_1.CanActivateViaAuthGuardAdmin
+        ] },
     { path: 'client', component: client_component_1.ClientComponent, canActivate: [
             auth_guard_admin_1.CanActivateViaAuthGuardAdmin
         ] },

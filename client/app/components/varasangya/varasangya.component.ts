@@ -35,8 +35,64 @@ export class VarasangyaComponent implements OnInit{
 
     }
 
-    
+    // main menu
+  // about function
+    aboutmahal(){
+
+    }  
+
+  //instruction function 
+  instruction(){
+
+  }
+
+ // setting function
+ setting(){
+
+ }
+
+// help
+help(){
+
+}
+
+// report us
+report(){
+
+}
+
+// Logout
+Logout(){
+
+}
 
 
+// panel items
+varasangyadetail(){
+
+}
+
+addvarasangya(){
+
+}
+
+pendingvarasangya(){
+
+}
+
+varasangyabetweenmonth(){
+
+}
   
+membervarasangya(){
+
+}
+
+overallvarasangya(){
+
+}
+
+
+
+
 }

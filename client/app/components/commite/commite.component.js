@@ -22,6 +22,69 @@ var CommiteComponent = (function () {
     // on initialization 
     CommiteComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    CommiteComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    CommiteComponent.prototype.instruction = function () {
+    };
+    // setting function
+    CommiteComponent.prototype.setting = function () {
+    };
+    // help
+    CommiteComponent.prototype.help = function () {
+    };
+    // report us
+    CommiteComponent.prototype.report = function () {
+    };
+    // Logout
+    CommiteComponent.prototype.Logout = function () {
+    };
+    // panel items
+    // home
+    CommiteComponent.prototype.home = function () {
+        this.router.navigate(['/customer']);
+    };
+    CommiteComponent.prototype.addmember = function () {
+        this.router.navigate(['/client']);
+    };
+    CommiteComponent.prototype.inbox = function () {
+        // class disabled
+    };
+    CommiteComponent.prototype.varasangya = function () {
+        this.router.navigate(['/varasangya']);
+    };
+    CommiteComponent.prototype.eidsangya = function () {
+        this.router.navigate(['/perunaal']);
+    };
+    CommiteComponent.prototype.moludsangya = function () {
+        this.router.navigate(['/molud']);
+    };
+    CommiteComponent.prototype.rathibsangya = function () {
+        this.router.navigate(['/rathib']);
+    };
+    CommiteComponent.prototype.charitysangya = function () {
+        this.router.navigate(['/charity']);
+    };
+    CommiteComponent.prototype.miscellanous = function () {
+        this.router.navigate(['/miscellanous']);
+    };
+    CommiteComponent.prototype.madrass = function () {
+        // currently disabled
+    };
+    CommiteComponent.prototype.onlinetranscation = function () {
+        // currently disabled
+    };
+    CommiteComponent.prototype.Sendnotification = function () {
+        this.router.navigate(['/notification']);
+    };
+    CommiteComponent.prototype.marriagecertificate = function () {
+        this.router.navigate(['/marriagecertificate']);
+    };
+    CommiteComponent.prototype.gallery = function () {
+        // currently disabled
+    };
     return CommiteComponent;
 }());
 CommiteComponent = __decorate([
