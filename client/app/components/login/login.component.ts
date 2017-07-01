@@ -17,7 +17,7 @@ import {Base64} from 'js-base64';
 
 export class TasksComponent implements OnInit{ 
 
-    public name:any;
+    public email:any;
     public password:any;
     public registration:any;
     public access_token:any;
@@ -48,15 +48,15 @@ export class TasksComponent implements OnInit{
 
     
 // on login button press
-onLogin(){
+Login(){
     
 console.log('reached login')
        // if admin
 
-          if(this.name == 'admin'){
+          if(this.email == 'admin'){
                  
                  // redirect
-                    sessionStorage.setItem('User',this.name)
+                    sessionStorage.setItem('User',this.email)
                     this.router.navigate(['/admin']);  
 
 
@@ -66,7 +66,7 @@ console.log('reached login')
             // if users
                     
                     // redirect
-                    sessionStorage.setItem('User',this.name)
+                    sessionStorage.setItem('User',this.email)
                     this.router.navigate(['/commite']);  
 
 

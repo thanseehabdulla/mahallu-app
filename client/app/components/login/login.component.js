@@ -29,18 +29,18 @@ var TasksComponent = (function () {
         //      }
     };
     // on login button press
-    TasksComponent.prototype.onLogin = function () {
+    TasksComponent.prototype.Login = function () {
         console.log('reached login');
         // if admin
-        if (this.name == 'admin') {
+        if (this.email == 'admin') {
             // redirect
-            sessionStorage.setItem('User', this.name);
+            sessionStorage.setItem('User', this.email);
             this.router.navigate(['/admin']);
         }
         else {
             // if users
             // redirect
-            sessionStorage.setItem('User', this.name);
+            sessionStorage.setItem('User', this.email);
             this.router.navigate(['/commite']);
         }
     };

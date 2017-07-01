@@ -14,39 +14,23 @@ var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
-require("jquery");
-require("datatables.net");
-var AdminComponent = (function () {
-    function AdminComponent(router, http) {
+var RathibComponent = (function () {
+    function RathibComponent(router, http) {
         this.router = router;
         this.http = http;
     }
-    // on init
-    AdminComponent.prototype.ngOnInit = function () {
+    // on initialization 
+    RathibComponent.prototype.ngOnInit = function () {
     };
-    AdminComponent.prototype.ngAfterViewInit = function () {
-        this.initDatatable();
-    };
-    AdminComponent.prototype.initDatatable = function () {
-    };
-    AdminComponent.prototype.reInitDatatable = function () {
-    };
-    return AdminComponent;
+    return RathibComponent;
 }());
-AdminComponent = __decorate([
+RathibComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'admin',
-        templateUrl: './admin.component.html',
-        styles: [
-            "styles.css",
-            "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-            "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-            "../node_modules/datatables.net-bs/css/dataTables.bootstrap.css",
-            "../node_modules/datatables.net-select-bs/css/select.bootstrap.css"
-        ]
+        selector: 'rathib',
+        templateUrl: './rathib.component.html',
     }),
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
-], AdminComponent);
-exports.AdminComponent = AdminComponent;
-//# sourceMappingURL=admin.component.js.map
+], RathibComponent);
+exports.RathibComponent = RathibComponent;
+//# sourceMappingURL=rathib.component.js.map

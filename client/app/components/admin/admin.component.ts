@@ -1,4 +1,4 @@
-we are in commitee
+
 import { Component , OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
@@ -47,21 +47,13 @@ ngAfterViewInit() {
 
     private initDatatable(): void {
    
-    // let exampleId: any = $('#example');
-    // this.tableWidget = exampleId.DataTable({
-    //   destroy: true,
-    //   select: true
-    // });
+    
  
   }
 
 
   private reInitDatatable(): void {
-    // if (this.tableWidget) {
-    //   this.tableWidget.destroy()
-    //   this.tableWidget=null
-    // }
-    // setTimeout(() => this.initDatatable(),0)
+    
   }
 
   
