@@ -35,7 +35,63 @@ export class PerunaalComponent implements OnInit{
 
     }
 
-    
+     // main menu
+  // about function
+    aboutmahal(){
+
+    }  
+
+  //instruction function 
+  instruction(){
+
+  }
+
+ // setting function
+ setting(){
+
+ }
+
+// help
+help(){
+
+}
+
+// report us
+report(){
+
+}
+
+// Logout
+Logout(){
+
+}
+
+
+// panel items
+eidsangyadetail(){
+
+}
+
+addeidsangya(){
+
+}
+
+pendingeidsangya(){
+
+}
+
+eidsangyabetweenmonth(){
+
+}
+  
+membereidsangya(){
+
+}
+
+overalleidsangya(){
+
+}
+
 
 
   

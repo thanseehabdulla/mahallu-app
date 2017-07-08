@@ -21,6 +21,15 @@ var CommiteComponent = (function () {
     }
     // on initialization 
     CommiteComponent.prototype.ngOnInit = function () {
+        if (localStorage.getItem('User') == 'admin') {
+            this.router.navigate(['/admin']);
+        }
+        else if (localStorage.getItem('User') == 'commite') {
+            this.router.navigate(['/commite']);
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     };
     // main menu
     // about function
@@ -40,6 +49,11 @@ var CommiteComponent = (function () {
     };
     // Logout
     CommiteComponent.prototype.Logout = function () {
+        localStorage.removeItem('User');
+        localStorage.removeItem('access_token');
+        localStorage.removeItem('refresh_token');
+        this.router.navigate(['/login']);
+        console.log('logged out');
     };
     // panel items
     // home

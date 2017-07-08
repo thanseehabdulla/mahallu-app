@@ -22,6 +22,38 @@ var RathibComponent = (function () {
     // on initialization 
     RathibComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    RathibComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    RathibComponent.prototype.instruction = function () {
+    };
+    // setting function
+    RathibComponent.prototype.setting = function () {
+    };
+    // help
+    RathibComponent.prototype.help = function () {
+    };
+    // report us
+    RathibComponent.prototype.report = function () {
+    };
+    // Logout
+    RathibComponent.prototype.Logout = function () {
+    };
+    // panel items
+    RathibComponent.prototype.rathibsangyadetail = function () {
+    };
+    RathibComponent.prototype.addrathibsangya = function () {
+    };
+    RathibComponent.prototype.pendingrathibsangya = function () {
+    };
+    RathibComponent.prototype.rathibsangyabetweenmonth = function () {
+    };
+    RathibComponent.prototype.memberrathibsangya = function () {
+    };
+    RathibComponent.prototype.overallrathibsangya = function () {
+    };
     return RathibComponent;
 }());
 RathibComponent = __decorate([

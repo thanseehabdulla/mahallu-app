@@ -22,6 +22,38 @@ var MoludComponent = (function () {
     // on initialization 
     MoludComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    MoludComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    MoludComponent.prototype.instruction = function () {
+    };
+    // setting function
+    MoludComponent.prototype.setting = function () {
+    };
+    // help
+    MoludComponent.prototype.help = function () {
+    };
+    // report us
+    MoludComponent.prototype.report = function () {
+    };
+    // Logout
+    MoludComponent.prototype.Logout = function () {
+    };
+    // panel items
+    MoludComponent.prototype.moludsangyadetail = function () {
+    };
+    MoludComponent.prototype.addmoludsangya = function () {
+    };
+    MoludComponent.prototype.pendingmoludsangya = function () {
+    };
+    MoludComponent.prototype.moludsangyabetweenmonth = function () {
+    };
+    MoludComponent.prototype.membermoludsangya = function () {
+    };
+    MoludComponent.prototype.overallmoludsangya = function () {
+    };
     return MoludComponent;
 }());
 MoludComponent = __decorate([

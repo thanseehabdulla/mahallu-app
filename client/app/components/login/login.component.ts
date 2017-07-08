@@ -35,14 +35,16 @@ export class TasksComponent implements OnInit{
     
     // on initialization 
     ngOnInit(){
-// if(sessionStorage.getItem('User')=='admin'){
+if(localStorage.getItem('User')=='admin'){
      
-//      this.router.navigate(['/admin']);
+     this.router.navigate(['/admin']);
 
-//         }
-//      else if(sessionStorage.getItem('User')=='commite'){
-//         this.router.navigate(['/commite']);
-//      }
+        }
+     else if(localStorage.getItem('User')=='commite'){
+        this.router.navigate(['/commite']);
+     }else{
+        this.router.navigate(['/login']);
+     }
 
     }
 
@@ -55,21 +57,91 @@ console.log('reached login')
 
           if(this.email == 'admin'){
                  
-                 // redirect
-                    sessionStorage.setItem('User',this.email)
-                    this.router.navigate(['/admin']);  
+                 // pre registration if not added
+             let url = API.API_REGISTER;
+             let body = "username="+this.email+"&password="+this.password;
+             let head = new Headers({
+             'Content-Type': 'application/x-www-form-urlencoded'
+               });
+    
+
+            this.http.post(url, body, {headers : head})
+            .map(res =>  res.json())
+            .subscribe(data => {
+               
+               
+            
+        
+    
+              }, error => {
+               console.log(error);
+               });
+
+       console.log('get access_token');
+    // get access token
+       let urlaccess = API.API_AccessToken;
+             let body2 = "username="+this.email+"&password="+this.password+'&grant_type=password';
+             localStorage.setItem('username',this.email)
+             var authdata = btoa('test' + ':' + 'secret');
+             let head2 = new Headers({
+             'Content-Type': 'application/x-www-form-urlencoded',
+             'Authorization':'Basic '+ authdata
+    });
+    
+            this.http.post(urlaccess, body2, {headers : head2})
+            .map(res =>  res.json())
+            .subscribe(data => {
+              this.access_token =  data.access_token;               
+              this.refresh_token = data.refresh_token; 
+    console.log('access_token' + this.access_token +'\n refresh_token' + this.refresh_token)
+        localStorage.setItem('access_token',this.access_token)      
+        localStorage.setItem('refresh_token',this.refresh_token)    
+        localStorage.setItem('User',"admin")
+        localStorage.setItem('code',this.email)
+        localStorage.setItem('objectid',data.userObjectId)
+        this.router.navigate(['/admin']);   
+     }, error => {
+               console.log(error);
+           
+     });
 
 
 
           }else{
 
-            // if users
+           
                     
-                    // redirect
-                    sessionStorage.setItem('User',this.email)
+
+  let urlaccess = API.API_AccessToken;
+             let body2 = "username="+this.email+"&password="+this.password+'&grant_type=password';
+            localStorage.setItem('username',this.email)
+             var authdata = btoa('clientBasic' + ':' + 'clientPassword');
+             let head2 = new Headers({
+             'Content-Type': 'application/x-www-form-urlencoded',
+             'Authorization':'Basic '+ authdata
+    });
+    
+            this.http.post(urlaccess, body2, {headers : head2})
+            .map(res =>  res.json())
+            // do any other checking for statuses here
+        
+            .subscribe(data => {
+              this.access_token =  data.access_token;               
+              this.refresh_token = data.refresh_token; 
+    console.log('access_token' + this.access_token +'\n refresh_token' + this.refresh_token)
+    // localStorage.setItem('objectId',data.userObjectId)
+        localStorage.setItem('access_token',this.access_token)      
+        localStorage.setItem('refresh_token',this.refresh_token)    
+        localStorage.setItem('User',"commite")
+                    localStorage.setItem('code',this.email);
                     this.router.navigate(['/commite']);  
-
-
+     }, error => {
+               console.log(error + "customer error");
+              
+            });
+        
+     
+    }
 
 
 

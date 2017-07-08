@@ -1,6 +1,6 @@
 var mongojs = require('mongojs')
 
-var db = mongojs('gasterminal')
+var db = mongojs('mahallu')
 
 exports.db = function() {
     return db

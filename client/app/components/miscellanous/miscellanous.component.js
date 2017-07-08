@@ -22,6 +22,38 @@ var MiscellanousComponent = (function () {
     // on initialization 
     MiscellanousComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    MiscellanousComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    MiscellanousComponent.prototype.instruction = function () {
+    };
+    // setting function
+    MiscellanousComponent.prototype.setting = function () {
+    };
+    // help
+    MiscellanousComponent.prototype.help = function () {
+    };
+    // report us
+    MiscellanousComponent.prototype.report = function () {
+    };
+    // Logout
+    MiscellanousComponent.prototype.Logout = function () {
+    };
+    // panel items
+    MiscellanousComponent.prototype.miscellanoussangyadetail = function () {
+    };
+    MiscellanousComponent.prototype.addmiscellanoussangya = function () {
+    };
+    MiscellanousComponent.prototype.pendingmiscellanoussangya = function () {
+    };
+    MiscellanousComponent.prototype.miscellanoussangyabetweenmonth = function () {
+    };
+    MiscellanousComponent.prototype.membermiscellanoussangya = function () {
+    };
+    MiscellanousComponent.prototype.overallmiscellanoussangya = function () {
+    };
     return MiscellanousComponent;
 }());
 MiscellanousComponent = __decorate([

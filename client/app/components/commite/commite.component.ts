@@ -31,7 +31,16 @@ export class CommiteComponent implements OnInit{
     
     // on initialization 
     ngOnInit(){
+if(localStorage.getItem('User')=='admin'){
+     
+     this.router.navigate(['/admin']);
 
+        }
+     else if(localStorage.getItem('User')=='commite'){
+        this.router.navigate(['/commite']);
+     }else{
+        this.router.navigate(['/login']);
+     }
 
     }
 
@@ -65,7 +74,13 @@ report(){
 
 // Logout
 Logout(){
+localStorage.removeItem('User');
+   localStorage.removeItem('access_token');      
+   localStorage.removeItem('refresh_token');    
 
+   this.router.navigate(['/login']);
+   
+   console.log('logged out');
 }
 
 

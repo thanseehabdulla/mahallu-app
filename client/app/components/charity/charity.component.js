@@ -22,6 +22,38 @@ var CharityComponent = (function () {
     // on initialization 
     CharityComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    CharityComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    CharityComponent.prototype.instruction = function () {
+    };
+    // setting function
+    CharityComponent.prototype.setting = function () {
+    };
+    // help
+    CharityComponent.prototype.help = function () {
+    };
+    // report us
+    CharityComponent.prototype.report = function () {
+    };
+    // Logout
+    CharityComponent.prototype.Logout = function () {
+    };
+    // panel items
+    CharityComponent.prototype.charitysangyadetail = function () {
+    };
+    CharityComponent.prototype.addcharitysangya = function () {
+    };
+    CharityComponent.prototype.pendingcharitysangya = function () {
+    };
+    CharityComponent.prototype.charitysangyabetweenmonth = function () {
+    };
+    CharityComponent.prototype.membercharitysangya = function () {
+    };
+    CharityComponent.prototype.overallcharitysangya = function () {
+    };
     return CharityComponent;
 }());
 CharityComponent = __decorate([

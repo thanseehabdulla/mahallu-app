@@ -10,7 +10,7 @@ var server = oauth2orize.createServer();
 
 //Resource owner password
 server.exchange(oauth2orize.exchange.password(function (client, username, password, scope, done) {
-    db.collection('users').findOne({username: username}, function (err, user) {
+    db.collection('users').findOne({$or: [{useremail: username},{usernumber:username},{usercode:username},{mahalcode:username},{phone:username},{email:username}]}, function (err, user) {
         if (err) return done(err)
         if (!user) return done(null, false)
         bcrypt.compare(password, user.password, function (err, res) {
@@ -23,7 +23,7 @@ server.exchange(oauth2orize.exchange.password(function (client, username, passwo
             
             var expirationDate = new Date(new Date().getTime() + (3600 * 100000))
         
-            db.collection('accessTokens').save({token: tokenHash, expirationDate: expirationDate, clientId: client.clientId, userId: username, scope: scope}, function (err) {
+            db.collection('accessTokens').save({token: tokenHash, expirationDate: expirationDate, clientId: client.clientId, userId: username, scope: scope,userObjectId:user._id}, function (err) {
                 if (err) return done(err)
                 db.collection('refreshTokens').save({refreshToken: refreshTokenHash, clientId: client.clientId, userId: username}, function (err) {
                     if (err) return done(err)

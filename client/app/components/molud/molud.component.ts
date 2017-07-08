@@ -35,7 +35,64 @@ export class MoludComponent implements OnInit{
 
     }
 
-    
+      // main menu
+  // about function
+    aboutmahal(){
+
+    }  
+
+  //instruction function 
+  instruction(){
+
+  }
+
+ // setting function
+ setting(){
+
+ }
+
+// help
+help(){
+
+}
+
+// report us
+report(){
+
+}
+
+// Logout
+Logout(){
+
+}
+
+
+// panel items
+moludsangyadetail(){
+
+}
+
+addmoludsangya(){
+
+}
+
+pendingmoludsangya(){
+
+}
+
+moludsangyabetweenmonth(){
+
+}
+  
+membermoludsangya(){
+
+}
+
+overallmoludsangya(){
+
+}
+
+
 
 
   

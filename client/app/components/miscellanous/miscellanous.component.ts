@@ -36,6 +36,63 @@ export class MiscellanousComponent implements OnInit{
     }
 
     
+  // main menu
+  // about function
+    aboutmahal(){
+
+    }  
+
+  //instruction function 
+  instruction(){
+
+  }
+
+ // setting function
+ setting(){
+
+ }
+
+// help
+help(){
+
+}
+
+// report us
+report(){
+
+}
+
+// Logout
+Logout(){
+}
+
+
+
+// panel items
+miscellanoussangyadetail(){
+
+}
+
+addmiscellanoussangya(){
+
+}
+
+pendingmiscellanoussangya(){
+
+}
+
+miscellanoussangyabetweenmonth(){
+
+}
+  
+membermiscellanoussangya(){
+
+}
+
+overallmiscellanoussangya(){
+
+}
+
 
 
   

@@ -22,6 +22,38 @@ var VarasangyaComponent = (function () {
     // on initialization 
     VarasangyaComponent.prototype.ngOnInit = function () {
     };
+    // main menu
+    // about function
+    VarasangyaComponent.prototype.aboutmahal = function () {
+    };
+    //instruction function 
+    VarasangyaComponent.prototype.instruction = function () {
+    };
+    // setting function
+    VarasangyaComponent.prototype.setting = function () {
+    };
+    // help
+    VarasangyaComponent.prototype.help = function () {
+    };
+    // report us
+    VarasangyaComponent.prototype.report = function () {
+    };
+    // Logout
+    VarasangyaComponent.prototype.Logout = function () {
+    };
+    // panel items
+    VarasangyaComponent.prototype.varasangyadetail = function () {
+    };
+    VarasangyaComponent.prototype.addvarasangya = function () {
+    };
+    VarasangyaComponent.prototype.pendingvarasangya = function () {
+    };
+    VarasangyaComponent.prototype.varasangyabetweenmonth = function () {
+    };
+    VarasangyaComponent.prototype.membervarasangya = function () {
+    };
+    VarasangyaComponent.prototype.overallvarasangya = function () {
+    };
     return VarasangyaComponent;
 }());
 VarasangyaComponent = __decorate([
