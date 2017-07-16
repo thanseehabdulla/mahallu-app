@@ -7,12 +7,11 @@ import {TasksComponent} from './components/login/login.component';
 import {CommiteComponent} from './components/commite/commite.component'
 import {AdminComponent} from './components/admin/admin.component'
 import { MyDatePickerModule } from 'mydatepicker';
-import { AgmCoreModule } from 'angular2-google-maps/core';
 import { RouterModule, Routes } from '@angular/router';
 import {pageNotFoundComponent} from './components/pagenotfound/pagenotfound.component'
 import {CanActivateViaAuthGuard} from './components/security/auth.guard'
 import {CanActivateViaAuthGuardAdmin} from './components/security/auth.guard.admin'
-import {ConfirmDeactivateGuard} from './components/security/auth.deguard'
+
 import {AuthService} from './components/security/auth.service'
 
 // updated routes
@@ -77,13 +76,11 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  imports:      [ BrowserModule, HttpModule, FormsModule,MyDatePickerModule,AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
-    }),RouterModule.forRoot(appRoutes)],
+  imports:      [ BrowserModule, HttpModule, FormsModule,MyDatePickerModule,RouterModule.forRoot(appRoutes)],
   declarations: [AppComponent, TasksComponent,AdminComponent,pageNotFoundComponent,CommiteComponent,CharityComponent,ClientComponent,FamilydetailComponent,MarriageCertificateComponent,MiscellanousComponent,MoludComponent,NotificationComponent,PerunaalComponent,RathibComponent,VarasangyaComponent],
    providers: [
     AuthService,
-    CanActivateViaAuthGuard,ConfirmDeactivateGuard,CanActivateViaAuthGuardAdmin
+    CanActivateViaAuthGuard,CanActivateViaAuthGuardAdmin
   ],
   bootstrap: [AppComponent]
 })

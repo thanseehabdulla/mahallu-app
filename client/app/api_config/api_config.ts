@@ -8,9 +8,17 @@ public static API_AccessToken = API.API_ENDPOINT + "/oauth/token";
 
 public static API_ADDMAHAL = API.API_ENDPOINT + "/api/addmahal"
 
+public static API_ADDMEMBER = API.API_ENDPOINT + "/api/addmember"
+
 public static API_GETMAHAL =API.API_ENDPOINT + "/api/getmahal/"
 
+public static API_GETMEMBERS =API.API_ENDPOINT + "/api/getmembers/"
+
 public static API_UPDATEMAHAL = API.API_ENDPOINT + "/api/updatemahal/"
+
+public static API_UPDATEMEMBERS = API.API_ENDPOINT + "/api/updatemembers/"
+
+public static API_REMOVEMEMBERS = API.API_ENDPOINT + "/api/removemembers/"
 
 public static API_REMOVEMAHAL = API.API_ENDPOINT + "/api/removemahal/"
 

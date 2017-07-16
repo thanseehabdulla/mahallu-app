@@ -11,7 +11,7 @@ import {Base64} from 'js-base64';
 
 @Component({
   moduleId: module.id,
-  selector: 'comimite',
+  selector: 'commite',
   templateUrl: './commite.component.html',
 })
 

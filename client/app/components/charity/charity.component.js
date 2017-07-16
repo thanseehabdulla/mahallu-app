@@ -9,53 +9,43 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var http_1 = require("@angular/http");
+const core_1 = require("@angular/core");
+const router_1 = require("@angular/router");
+const http_1 = require("@angular/http");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
-var CharityComponent = (function () {
-    function CharityComponent(router, http) {
+let CharityComponent = class CharityComponent {
+    constructor(router, http) {
         this.router = router;
         this.http = http;
     }
-    // on initialization 
-    CharityComponent.prototype.ngOnInit = function () {
-    };
-    // main menu
-    // about function
-    CharityComponent.prototype.aboutmahal = function () {
-    };
-    //instruction function 
-    CharityComponent.prototype.instruction = function () {
-    };
-    // setting function
-    CharityComponent.prototype.setting = function () {
-    };
-    // help
-    CharityComponent.prototype.help = function () {
-    };
-    // report us
-    CharityComponent.prototype.report = function () {
-    };
-    // Logout
-    CharityComponent.prototype.Logout = function () {
-    };
-    // panel items
-    CharityComponent.prototype.charitysangyadetail = function () {
-    };
-    CharityComponent.prototype.addcharitysangya = function () {
-    };
-    CharityComponent.prototype.pendingcharitysangya = function () {
-    };
-    CharityComponent.prototype.charitysangyabetweenmonth = function () {
-    };
-    CharityComponent.prototype.membercharitysangya = function () {
-    };
-    CharityComponent.prototype.overallcharitysangya = function () {
-    };
-    return CharityComponent;
-}());
+    ngOnInit() {
+    }
+    aboutmahal() {
+    }
+    instruction() {
+    }
+    setting() {
+    }
+    help() {
+    }
+    report() {
+    }
+    Logout() {
+    }
+    charitysangyadetail() {
+    }
+    addcharitysangya() {
+    }
+    pendingcharitysangya() {
+    }
+    charitysangyabetweenmonth() {
+    }
+    membercharitysangya() {
+    }
+    overallcharitysangya() {
+    }
+};
 CharityComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
@@ -65,4 +55,3 @@ CharityComponent = __decorate([
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
 ], CharityComponent);
 exports.CharityComponent = CharityComponent;
-//# sourceMappingURL=charity.component.js.map

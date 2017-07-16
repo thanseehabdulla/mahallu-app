@@ -9,12 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var pageNotFoundComponent = (function () {
-    function pageNotFoundComponent() {
+const core_1 = require("@angular/core");
+let pageNotFoundComponent = class pageNotFoundComponent {
+    constructor() {
     }
-    return pageNotFoundComponent;
-}());
+};
 pageNotFoundComponent = __decorate([
     core_1.Component({
         template: '<h2>Page not found , statsus 404 error</h2>'
@@ -22,4 +21,3 @@ pageNotFoundComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], pageNotFoundComponent);
 exports.pageNotFoundComponent = pageNotFoundComponent;
-//# sourceMappingURL=pagenotfound.component.js.map

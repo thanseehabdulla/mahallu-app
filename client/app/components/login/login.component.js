@@ -9,19 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var http_1 = require("@angular/http");
+const core_1 = require("@angular/core");
+const router_1 = require("@angular/router");
+const http_1 = require("@angular/http");
 require("rxjs/add/operator/catch");
 require("rxjs/add/operator/map");
-var api_config_1 = require("./../../api_config/api_config");
-var TasksComponent = (function () {
-    function TasksComponent(router, http) {
+const api_config_1 = require("./../../api_config/api_config");
+let TasksComponent = class TasksComponent {
+    constructor(router, http) {
         this.router = router;
         this.http = http;
     }
-    // on initialization 
-    TasksComponent.prototype.ngOnInit = function () {
+    ngOnInit() {
         if (localStorage.getItem('User') == 'admin') {
             this.router.navigate(['/admin']);
         }
@@ -31,79 +30,72 @@ var TasksComponent = (function () {
         else {
             this.router.navigate(['/login']);
         }
-    };
-    // on login button press
-    TasksComponent.prototype.Login = function () {
-        var _this = this;
+    }
+    Login() {
         console.log('reached login');
-        // if admin
         if (this.email == 'admin') {
-            // pre registration if not added
-            var url = api_config_1.API.API_REGISTER;
-            var body = "username=" + this.email + "&password=" + this.password;
-            var head = new http_1.Headers({
+            let url = api_config_1.API.API_REGISTER;
+            let body = "username=" + this.email + "&password=" + this.password;
+            let head = new http_1.Headers({
                 'Content-Type': 'application/x-www-form-urlencoded'
             });
             this.http.post(url, body, { headers: head })
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) {
-            }, function (error) {
+                .map(res => res.json())
+                .subscribe(data => {
+            }, error => {
                 console.log(error);
             });
             console.log('get access_token');
-            // get access token
-            var urlaccess = api_config_1.API.API_AccessToken;
-            var body2 = "username=" + this.email + "&password=" + this.password + '&grant_type=password';
+            let urlaccess = api_config_1.API.API_AccessToken;
+            let body2 = "username=" + this.email + "&password=" + this.password + '&grant_type=password';
             localStorage.setItem('username', this.email);
             var authdata = btoa('test' + ':' + 'secret');
-            var head2 = new http_1.Headers({
+            let head2 = new http_1.Headers({
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': 'Basic ' + authdata
             });
             this.http.post(urlaccess, body2, { headers: head2 })
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) {
-                _this.access_token = data.access_token;
-                _this.refresh_token = data.refresh_token;
-                console.log('access_token' + _this.access_token + '\n refresh_token' + _this.refresh_token);
-                localStorage.setItem('access_token', _this.access_token);
-                localStorage.setItem('refresh_token', _this.refresh_token);
+                .map(res => res.json())
+                .subscribe(data => {
+                this.access_token = data.access_token;
+                this.refresh_token = data.refresh_token;
+                console.log('access_token' + this.access_token + '\n refresh_token' + this.refresh_token);
+                localStorage.setItem('access_token', this.access_token);
+                localStorage.setItem('refresh_token', this.refresh_token);
                 localStorage.setItem('User', "admin");
-                localStorage.setItem('code', _this.email);
+                localStorage.setItem('code', this.email);
                 localStorage.setItem('objectid', data.userObjectId);
-                _this.router.navigate(['/admin']);
-            }, function (error) {
+                this.router.navigate(['/admin']);
+            }, error => {
                 console.log(error);
             });
         }
         else {
-            var urlaccess = api_config_1.API.API_AccessToken;
-            var body2 = "username=" + this.email + "&password=" + this.password + '&grant_type=password';
+            let urlaccess = api_config_1.API.API_AccessToken;
+            let body2 = "username=" + this.email + "&password=" + this.password + '&grant_type=password';
             localStorage.setItem('username', this.email);
             var authdata = btoa('clientBasic' + ':' + 'clientPassword');
-            var head2 = new http_1.Headers({
+            let head2 = new http_1.Headers({
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': 'Basic ' + authdata
             });
             this.http.post(urlaccess, body2, { headers: head2 })
-                .map(function (res) { return res.json(); })
-                .subscribe(function (data) {
-                _this.access_token = data.access_token;
-                _this.refresh_token = data.refresh_token;
-                console.log('access_token' + _this.access_token + '\n refresh_token' + _this.refresh_token);
-                // localStorage.setItem('objectId',data.userObjectId)
-                localStorage.setItem('access_token', _this.access_token);
-                localStorage.setItem('refresh_token', _this.refresh_token);
+                .map(res => res.json())
+                .subscribe(data => {
+                this.access_token = data.access_token;
+                this.refresh_token = data.refresh_token;
+                console.log('access_token' + this.access_token + '\n refresh_token' + this.refresh_token);
+                localStorage.setItem('access_token', this.access_token);
+                localStorage.setItem('refresh_token', this.refresh_token);
                 localStorage.setItem('User', "commite");
-                localStorage.setItem('code', _this.email);
-                _this.router.navigate(['/commite']);
-            }, function (error) {
+                localStorage.setItem('code', this.email);
+                this.router.navigate(['/commite']);
+            }, error => {
                 console.log(error + "customer error");
             });
         }
-    };
-    return TasksComponent;
-}());
+    }
+};
 TasksComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
@@ -113,4 +105,3 @@ TasksComponent = __decorate([
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
 ], TasksComponent);
 exports.TasksComponent = TasksComponent;
-//# sourceMappingURL=login.component.js.map

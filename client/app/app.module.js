@@ -6,34 +6,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var http_1 = require("@angular/http");
-var forms_1 = require("@angular/forms");
-var app_component_1 = require("./app.component");
-var login_component_1 = require("./components/login/login.component");
-var commite_component_1 = require("./components/commite/commite.component");
-var admin_component_1 = require("./components/admin/admin.component");
-var mydatepicker_1 = require("mydatepicker");
-var core_2 = require("angular2-google-maps/core");
-var router_1 = require("@angular/router");
-var pagenotfound_component_1 = require("./components/pagenotfound/pagenotfound.component");
-var auth_guard_1 = require("./components/security/auth.guard");
-var auth_guard_admin_1 = require("./components/security/auth.guard.admin");
-var auth_deguard_1 = require("./components/security/auth.deguard");
-var auth_service_1 = require("./components/security/auth.service");
-// updated routes
-var charity_component_1 = require("./components/charity/charity.component");
-var client_component_1 = require("./components/clientdetails/client.component");
-var familydetail_component_1 = require("./components/familydetails/familydetail.component");
-var marriagecertificate_component_1 = require("./components/marriagecertificate/marriagecertificate.component");
-var miscellanous_component_1 = require("./components/miscellanous/miscellanous.component");
-var molud_component_1 = require("./components/molud/molud.component");
-var notification_component_1 = require("./components/notification/notification.component");
-var perunaal_component_1 = require("./components/perunaal/perunaal.component");
-var rathib_component_1 = require("./components/rathib/rathib.component");
-var varasangya_component_1 = require("./components/varasangya/varasangya.component");
-var appRoutes = [
+const core_1 = require("@angular/core");
+const platform_browser_1 = require("@angular/platform-browser");
+const http_1 = require("@angular/http");
+const forms_1 = require("@angular/forms");
+const app_component_1 = require("./app.component");
+const login_component_1 = require("./components/login/login.component");
+const commite_component_1 = require("./components/commite/commite.component");
+const admin_component_1 = require("./components/admin/admin.component");
+const mydatepicker_1 = require("mydatepicker");
+const router_1 = require("@angular/router");
+const pagenotfound_component_1 = require("./components/pagenotfound/pagenotfound.component");
+const auth_guard_1 = require("./components/security/auth.guard");
+const auth_guard_admin_1 = require("./components/security/auth.guard.admin");
+const auth_service_1 = require("./components/security/auth.service");
+const charity_component_1 = require("./components/charity/charity.component");
+const client_component_1 = require("./components/clientdetails/client.component");
+const familydetail_component_1 = require("./components/familydetails/familydetail.component");
+const marriagecertificate_component_1 = require("./components/marriagecertificate/marriagecertificate.component");
+const miscellanous_component_1 = require("./components/miscellanous/miscellanous.component");
+const molud_component_1 = require("./components/molud/molud.component");
+const notification_component_1 = require("./components/notification/notification.component");
+const perunaal_component_1 = require("./components/perunaal/perunaal.component");
+const rathib_component_1 = require("./components/rathib/rathib.component");
+const varasangya_component_1 = require("./components/varasangya/varasangya.component");
+const appRoutes = [
     { path: 'charity', component: charity_component_1.CharityComponent, canActivate: [
             auth_guard_admin_1.CanActivateViaAuthGuardAdmin
         ] },
@@ -77,23 +74,17 @@ var appRoutes = [
     },
     { path: '**', component: pagenotfound_component_1.pageNotFoundComponent }
 ];
-var AppModule = (function () {
-    function AppModule() {
-    }
-    return AppModule;
-}());
+let AppModule = class AppModule {
+};
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, mydatepicker_1.MyDatePickerModule, core_2.AgmCoreModule.forRoot({
-                apiKey: 'AIzaSyDJSftDw2ZAC-PU9AXx0u7UVhbKGqO90j0'
-            }), router_1.RouterModule.forRoot(appRoutes)],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, mydatepicker_1.MyDatePickerModule, router_1.RouterModule.forRoot(appRoutes)],
         declarations: [app_component_1.AppComponent, login_component_1.TasksComponent, admin_component_1.AdminComponent, pagenotfound_component_1.pageNotFoundComponent, commite_component_1.CommiteComponent, charity_component_1.CharityComponent, client_component_1.ClientComponent, familydetail_component_1.FamilydetailComponent, marriagecertificate_component_1.MarriageCertificateComponent, miscellanous_component_1.MiscellanousComponent, molud_component_1.MoludComponent, notification_component_1.NotificationComponent, perunaal_component_1.PerunaalComponent, rathib_component_1.RathibComponent, varasangya_component_1.VarasangyaComponent],
         providers: [
             auth_service_1.AuthService,
-            auth_guard_1.CanActivateViaAuthGuard, auth_deguard_1.ConfirmDeactivateGuard, auth_guard_admin_1.CanActivateViaAuthGuardAdmin
+            auth_guard_1.CanActivateViaAuthGuard, auth_guard_admin_1.CanActivateViaAuthGuardAdmin
         ],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
 exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map

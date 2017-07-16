@@ -9,28 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
-var auth_service_1 = require("./auth.service");
-var CanActivateViaAuthGuard = (function () {
-    function CanActivateViaAuthGuard(authService, router) {
+const core_1 = require("@angular/core");
+const router_1 = require("@angular/router");
+const auth_service_1 = require("./auth.service");
+let CanActivateViaAuthGuard = class CanActivateViaAuthGuard {
+    constructor(authService, router) {
         this.authService = authService;
         this.router = router;
     }
-    CanActivateViaAuthGuard.prototype.canActivate = function () {
+    canActivate() {
         if (localStorage.getItem('User')) {
-            // logged in so return true
             return true;
         }
-        // not logged in so redirect to login page
         this.router.navigate(['/login']);
         return false;
-    };
-    return CanActivateViaAuthGuard;
-}());
+    }
+};
 CanActivateViaAuthGuard = __decorate([
     core_1.Injectable(),
     __metadata("design:paramtypes", [auth_service_1.AuthService, router_1.Router])
 ], CanActivateViaAuthGuard);
 exports.CanActivateViaAuthGuard = CanActivateViaAuthGuard;
-//# sourceMappingURL=auth.guard.js.map

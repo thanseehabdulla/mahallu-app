@@ -10,7 +10,7 @@ var server = oauth2orize.createServer();
 
 //Resource owner password
 server.exchange(oauth2orize.exchange.password(function (client, username, password, scope, done) {
-    db.collection('users').findOne({$or: [{useremail: username},{usernumber:username},{usercode:username},{mahalcode:username},{phone:username},{email:username}]}, function (err, user) {
+    db.collection('users').findOne({$or: [{useremail: username},{usernumber:username},{usercode:username},{mahalcode:username},{phone:username},{email:username},{mobile:username}]}, function (err, user) {
         if (err) return done(err)
         if (!user) return done(null, false)
         bcrypt.compare(password, user.password, function (err, res) {
