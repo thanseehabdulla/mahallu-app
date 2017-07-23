@@ -223,7 +223,7 @@ if(  !(this.mahalcode==null) &&
 
   // get access token
        let urlaccess = API.API_ADDMAHAL;
-             let body2 = "mahalname="+this.mahalname+"&mahalstatus"+this.mahalstatus+"&password="+this.password+'&email='+this.email+'&mahalcode='+this.mahalcode+'&pincode='+this.pincode+'&alternatenumber='+this.alternatenumber+'&address='+this.address+'&phone='+this.phone;
+             let body2 = "mahalname="+this.mahalname+"&mahalstatus="+this.mahalstatus+"&password="+this.password+'&email='+this.email+'&mahalcode='+this.mahalcode+'&pincode='+this.pincode+'&alternatenumber='+this.alternatenumber+'&address='+this.address+'&phone='+this.phone;
              this.accesstoken=localStorage.getItem('access_token')
              let head2 = new Headers({
              'Content-Type': 'application/x-www-form-urlencoded',
@@ -366,7 +366,7 @@ updateForm(){
   // get access token
   var id = localStorage.getItem('tempid');
        let urlaccess = API.API_UPDATEMAHAL+id;
-             let body2 = "mahalname="+this.mahalname+"&mahalstatus"+this.mahalstatus+"&password="+this.password+'&email='+this.email+'&mahalcode='+this.mahalcode+'&pincode='+this.pincode+'&alternatenumber='+this.alternatenumber+'&address='+this.address+'&phone='+this.phone;
+             let body2 = "mahalname="+this.mahalname+"&mahalstatus="+this.mahalstatus+"&password="+this.password+'&email='+this.email+'&mahalcode='+this.mahalcode+'&pincode='+this.pincode+'&alternatenumber='+this.alternatenumber+'&address='+this.address+'&phone='+this.phone;
              this.accesstoken=localStorage.getItem('access_token')
              let head2 = new Headers({
              'Content-Type': 'application/x-www-form-urlencoded',

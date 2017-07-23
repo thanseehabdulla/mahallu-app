@@ -72,7 +72,7 @@ app.post('/users', registration.registerUser)
 app.use('/upload',uploads)
 
 app.get('/favicon.ico', function(req, res) {
-    res.send(204);
+    res.sendStatus(204);
 });
 
 app.get('/restricted', passport.authenticate('accessToken', { session: false }), function (req, res) {

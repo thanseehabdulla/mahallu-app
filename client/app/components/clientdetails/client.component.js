@@ -23,13 +23,13 @@ let ClientComponent = class ClientComponent {
     }
     ngOnInit() {
         this.memberlist = 'Home / Memberlist';
+        this.loaddata();
     }
     ngAfterViewInit() {
         this.initDatatable();
         this.options = [{
                 name: 'Active'
-            },
-            {
+            }, {
                 name: 'Inactive'
             }];
     }
@@ -46,9 +46,6 @@ let ClientComponent = class ClientComponent {
             this.tableWidget = null;
         }
         setTimeout(() => this.initDatatable(), 0);
-    }
-    selectRow(index, row) {
-        this.selectedName = "row#" + index + " " + row.name;
     }
     aboutmahal() {
     }
@@ -85,6 +82,10 @@ let ClientComponent = class ClientComponent {
         this.password = null;
         this.cpassword = null;
         this.houseno = null;
+        this.fathername = null;
+        this.lastmosquename = null;
+        this.currentmosquename = null;
+        this.housename = null;
     }
     back() {
         this.router.navigate(['/commite']);
@@ -98,7 +99,7 @@ let ClientComponent = class ClientComponent {
         this.appstatus = newValue;
     }
     loaddata() {
-        console.log('load member data');
+        console.log("loading data");
         let url = api_config_1.API.API_GETMEMBERS;
         this.accesstoken = localStorage.getItem('access_token');
         let head2 = new http_1.Headers({
@@ -132,6 +133,7 @@ let ClientComponent = class ClientComponent {
         this.onNone();
         var displass = document.getElementById('editcustomer');
         displass.style.display = 'block';
+        this.memberlist = 'Home / EditMembers';
         this.loadsingledata(id);
     }
     loadsingledata(id) {
@@ -173,7 +175,7 @@ let ClientComponent = class ClientComponent {
             }
         });
     }
-    submitform() {
+    submitForm() {
         if (!(this.regno == null) &&
             !(this.name == null) &&
             !(this.password == null) &&
@@ -225,12 +227,82 @@ let ClientComponent = class ClientComponent {
         var memberlist = document.getElementById('showmemberlist');
         memberlist.style.display = 'block';
         this.memberlist = 'Home / Memberlist';
+        this.loaddata();
+        this.reinitvalues();
     }
     addmembers() {
         this.onNone();
         var addmembers = document.getElementById('addcustomer');
         addmembers.style.display = 'block';
         this.memberlist = 'Home / Add Members';
+        this.reinitvalues();
+    }
+    delete(id) {
+        console.log('deletedata');
+        let url = api_config_1.API.API_REMOVEMAHAL + id;
+        this.accesstoken = localStorage.getItem('access_token');
+        let head2 = new http_1.Headers({
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + this.accesstoken
+        });
+        this.http.delete(url, {
+            headers: head2
+        })
+            .map(res => {
+            return res.json();
+        }).catch(e => {
+            if (e.status === 401) {
+                return Observable_1.Observable.throw('Unauthorized');
+            }
+        }).subscribe(data => {
+            console.log(JSON.stringify(data));
+            this.loaddata();
+        }, error => {
+            if (error == "Unauthorized") {
+                alert(error);
+                console.log(error);
+            }
+        });
+    }
+    updateForm() {
+        if (!(this.regno == null) &&
+            !(this.name == null) &&
+            !(this.password == null) &&
+            !(this.email == null) &&
+            !(this.landlinenumber == null) &&
+            !(this.address == null) &&
+            !(this.mobile == null)) {
+            if (this.password == this.cpassword) {
+                var id = localStorage.getItem('tempid');
+                let urlaccess = api_config_1.API.API_UPDATEMEMBERS + id;
+                let body2 = "name=" + this.name + "&memberstatus" + this.memberstatus + "&password=" + this.password + '&email=' + this.email + '&regno=' + this.regno + '&fathername=' + this.fathername + '&landlinenumber=' + this.landlinenumber + '&address=' + this.address + '&mobile=' + this.mobile + '&housename=' + this.housename + '&lastmosquename=' + this.lastmosquename + '&currentmosquename=' + this.currentmosquename + '&created_at=' + this.model + '&updated_at=' + this.model + '&varasangya=' + this.varasangya + '&appstatus=' + this.appstatus + '&houseno=' + this.houseno;
+                this.accesstoken = localStorage.getItem('access_token');
+                let head2 = new http_1.Headers({
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': 'Bearer ' + this.accesstoken
+                });
+                this.http.put(urlaccess, body2, { headers: head2 })
+                    .map(res => res.json())
+                    .catch(e => {
+                    if (e.status === 401) {
+                        return Observable_1.Observable.throw('Unauthorized');
+                    }
+                })
+                    .subscribe(data => {
+                    this.home();
+                    this.router.navigate(['/client']);
+                }, error => {
+                    if (error == "Unauthorized") {
+                        console.log(error);
+                    }
+                    console.log(error);
+                });
+            }
+            else {
+            }
+        }
+        else {
+        }
     }
 };
 ClientComponent = __decorate([

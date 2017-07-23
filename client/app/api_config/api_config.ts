@@ -18,6 +18,8 @@ public static API_UPDATEMAHAL = API.API_ENDPOINT + "/api/updatemahal/"
 
 public static API_UPDATEMEMBERS = API.API_ENDPOINT + "/api/updatemembers/"
 
+    public static API_UPDATEMEMBERSSTATUS = API.API_ENDPOINT + "/api/updatemembersstatus/"
+
 public static API_REMOVEMEMBERS = API.API_ENDPOINT + "/api/removemembers/"
 
 public static API_REMOVEMAHAL = API.API_ENDPOINT + "/api/removemahal/"
