@@ -1,41 +1,33 @@
 # mahallu-app
-This is  a  mahallu app repo with MEAN App technology
 
 
-To run the project in linux
 
-use apt-get and install
+A complete MEAN STACK framework for mahal administration written with Typescript. 
+Uses Angular2 front-end
 
-mongod
+Requires
 
-node
+latest mongodb
 
-currently used version
+npm 5.3.0
 
-node 8.0.0
-npm 5.0.0
+node v8.0.0
 
-also install globally
-npm install nodemon express pm2
+global npm packages required 
+Typescript
+typings
+nodemon
 
-after this go to the directory root
 
-do
+Running application
 
-npm install
-
-then go to directory client
-
-npm install
-
-as front end and backend both use npm packages
-
-atlast to run the project
-
-we have created a taskrunner.sh
-
-please run the same
-
-./taskrunner.sh
+1.clone from git url and in the root path run npm install to install backend node modules
+2.navigate to clients and install npm modules
+3.to check npm installed properly use command
+npm list --depth=0 (no errors)
+4.typing install in the client directory
+Application run after compling front end and then running from backend
+todo
+run ./taskrunner from root
 
 Happy coding
