@@ -1,28 +1,26 @@
- import { Injectable } from '@angular/core';
-import { Router, CanActivate } from '@angular/router';
-import { AuthService } from './auth.service';
-
+import {Injectable} from "@angular/core";
+import {CanActivate, Router} from "@angular/router";
+import {AuthService} from "./auth.service";
 
 
 @Injectable()
- export class CanActivateViaAuthGuardAdmin implements CanActivate{
+export class CanActivateViaAuthGuardAdmin implements CanActivate {
 
 
+    constructor(private authService: AuthService, private router: Router) {
 
-constructor(private authService:AuthService,private router: Router){
+    }
 
-}
+    canActivate() {
 
-canActivate() {
-    
-    if (localStorage.getItem('User')) {
+        if (localStorage.getItem('User')) {
             // logged in so return true
             return true;
         }
- 
+
         // not logged in so redirect to login page
         this.router.navigate(['/login']);
         return false;
-  }
+    }
 
- }
+}

@@ -1,40 +1,41 @@
-
-
 <div class="container" style="width:100%">
-<div class="row">
-  <div class="col-xs-6">
-
-<div class="jumbotron" style="margin: 10% 0% 0% 0%">
-  <h1><b>Welcome to Mahallu App</b></h1>
-  <p style="position: relative;left:5%">"Lets make Electronic tracking of data between commitee and members Easier"</p>
- <div align="left">
-  <p><a class="btn btn-primary btn-lg" style="margin:5% 5% 0% 0%">Download App from Play Store</a>
-   <a class="btn btn-primary btn-lg" style="margin:5% 5% 0% 0%">Download App from App Store</a></p>
-</div>
-</div>
- </div>
+    <div class="row">
         <div class="col-xs-6">
-<div style="margin: 50% 0% 0% 0%" class="panel panel-success">
-  <div class="panel-heading">
-    <h3 class="panel-title" style="position: relative;left:40%">Login</h3>
-  </div>
-  <div class="panel-body">
-   <div class="form-group">
-  <label class="control-label" for="focusedInput">Mobile/Email</label>
-  <input class="form-control" id="focusedInput" type="text" placeholder="Mobile/Email" [(ngModel)]="email" required>
+
+            <div class="jumbotron" style="margin: 10% 0% 0% 0%">
+                <h1><b>Welcome to Mahallu App</b></h1>
+                <p style="position: relative;left:5%">"Lets make Electronic tracking of data between commitee and
+                    members Easier"</p>
+                <div align="left">
+                    <p><a class="btn btn-primary btn-lg" style="margin:5% 5% 0% 0%">Download App from Play Store</a>
+                        <a class="btn btn-primary btn-lg" style="margin:5% 5% 0% 0%">Download App from App Store</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6">
+            <div style="margin: 50% 0% 0% 0%" class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title" style="position: relative;left:40%">Login</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label" for="focusedInput">Mobile/Email</label>
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Mobile/Email"
+                               [(ngModel)]="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="focusedInput">Password</label>
+                        <input class="form-control" id="focusedInput" type="password" [(ngModel)]="password"
+                               placeholder="password" required>
+                    </div>
+
+
+                    <a style="position: relative;left: 40%" (click)="Login()" class="btn btn-success">Login</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
-
-<div class="form-group">
-  <label class="control-label" for="focusedInput">Password</label>
-  <input class="form-control" id="focusedInput" type="password" [(ngModel)]="password" placeholder="password" required>
-</div>
-
-
-<a style="position: relative;left: 40%" (click)="Login()" class="btn btn-success">Login</a>
-
-  </div>
-</div>
-
-</div>
- </div>
- </div>

@@ -25,7 +25,7 @@ let TasksComponent = class TasksComponent {
             this.router.navigate(['/admin']);
         }
         else if (localStorage.getItem('User') == 'commite') {
-            this.router.navigate(['/commite']);
+            this.router.navigate(['/dashboard']);
         }
         else {
             this.router.navigate(['/login']);
@@ -89,7 +89,7 @@ let TasksComponent = class TasksComponent {
                 localStorage.setItem('refresh_token', this.refresh_token);
                 localStorage.setItem('User', "commite");
                 localStorage.setItem('code', this.email);
-                this.router.navigate(['/commite']);
+                this.router.navigate(['/dashboard']);
             }, error => {
                 console.log(error + "customer error");
             });

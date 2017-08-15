@@ -49,11 +49,11 @@ passport.use("accessToken", new BearerStrategy(
             if (new Date() > token.expirationDate) {
                 done(null, false)
             } else {
-                db.collection('users').findOne({$or: [{useremail: token.userId},{usernumber:token.userId},{usercode:token.userId},{mahalcode:token.userId},{email:token.userId},{phone:token.userId},{mobile:token.userId}]}, function (err, user) {
+                db.collection('users').findOne({$or: [{useremail: token.userId}, {usernumber: token.userId}, {usercode: token.userId}, {mahalcode: token.userId}, {email: token.userId}, {phone: token.userId}, {mobile: token.userId}]}, function (err, user) {
                     if (err) return done(err)
                     if (!user) return done(null, false)
                     // no use of scopes for no
-                    var info = { scope: '*' }
+                    var info = {scope: '*'}
                     done(null, user, info);
                 })
             }

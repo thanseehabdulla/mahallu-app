@@ -1,0 +1,779 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+        <div class="sidebar-wrapper" style="background-color: #1b6d85">
+            <div class="logo">
+                <a class="simple-text">
+                    Mahal App
+                </a>
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a (click)="dashboard()">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="addmember()">
+                        <i class="pe-7s-user"></i>
+                        <p>Member List</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="paymentlist()">
+                        <i class="pe-7s-note2"></i>
+                        <p>Payment list</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="madrasss()">
+                        <i class="pe-7s-news-paper"></i>
+                        <p>Madrass</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="gallery()">
+                        <i class="pe-7s-science"></i>
+                        <p>Gallery</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="marriagecertificate()">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Marriage Certificate</p>
+                    </a>
+                </li>
+                <li>
+                    <a (click)="notifications()">
+                        <i class="pe-7s-bell"></i>
+                        <p>Notifications</p>
+                    </a>
+                </li>
+                <li class="active-pro">
+                    <a>
+                        <i class="pe-7s-rocket"></i>
+                        <p>Contact Us @ mail.com</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="collapse navbar-collapse">
+                    <!--<ul class="nav navbar-nav navbar-left">-->
+
+                        <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                <!--<i class="fa fa-globe"></i>-->
+                                <!--<b class="caret hidden-sm hidden-xs"></b>-->
+                                <!--<span class="notification hidden-sm hidden-xs">5</span>-->
+                                <!--<p class="hidden-lg hidden-md">-->
+                                    <!--5 Notifications-->
+                                    <!--<b class="caret"></b>-->
+                                <!--</p>-->
+                            <!--</a>-->
+                            <!--<ul class="dropdown-menu">-->
+                                <!--<li><a href="#">Notification 1</a></li>-->
+                                <!--<li><a href="#">Notification 2</a></li>-->
+                                <!--<li><a href="#">Notification 3</a></li>-->
+                                <!--<li><a href="#">Notification 4</a></li>-->
+                                <!--<li><a href="#">Another notification</a></li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                        <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<a href="">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<i class="fa fa-search"></i>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<p class="hidden-lg hidden-md">Search</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                    <!--</ul>-->
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-globe"></i>
+                                <b class="caret hidden-sm hidden-xs"></b>
+                                <span class="notification hidden-sm hidden-xs">5</span>
+                                <p class="hidden-lg hidden-md">
+                                    5 Notifications
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Notification 1</a></li>
+                                <li><a href="#">Notification 2</a></li>
+                                <li><a href="#">Notification 3</a></li>
+                                <li><a href="#">Notification 4</a></li>
+                                <li><a href="#">Another notification</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a (click)="addmember()">
+                                <p>Instructions</p>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <p>
+                                    Setting
+                                    <b class="caret"></b>
+                                </p>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Accounts</a></li>
+                                <li><a href="#">Help</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Report Us</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a (click)="Logout()">
+                                <p>Log out</p>
+                            </a>
+                        </li>
+                        <li class="separator hidden-lg hidden-md"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="dashboard">
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+<h2>Aliya this is  sample dashboard example used to how we can design mahal </h2>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Email Statistics</h4>
+                                    <p class="category">Last Campaign Performance</p>
+                                </div>
+                                <div class="content">
+                                    <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+
+                                    <div class="footer">
+                                        <div class="legend">
+                                            <i class="fa fa-circle text-info"></i> Open
+                                            <i class="fa fa-circle text-danger"></i> Bounce
+                                            <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                        </div>
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Users Behavior</h4>
+                                    <p class="category">24 Hours performance</p>
+                                </div>
+                                <div class="content">
+                                    <div id="chartHours" class="ct-chart"></div>
+                                    <div class="footer">
+                                        <div class="legend">
+                                            <i class="fa fa-circle text-info"></i> Open
+                                            <i class="fa fa-circle text-danger"></i> Click
+                                            <i class="fa fa-circle text-warning"></i> Click Second Time
+                                        </div>
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-history"></i> Updated 3 minutes ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card ">
+                                <div class="header">
+                                    <h4 class="title">2014 Sales</h4>
+                                    <p class="category">All products including Taxes</p>
+                                </div>
+                                <div class="content">
+                                    <div id="chartActivity" class="ct-chart"></div>
+
+                                    <div class="footer">
+                                        <div class="legend">
+                                            <i class="fa fa-circle text-info"></i> Tesla Model S
+                                            <i class="fa fa-circle text-danger"></i> BMW 5 Series
+                                        </div>
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-check"></i> Data information certified
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card ">
+                                <div class="header">
+                                    <h4 class="title">Tasks</h4>
+                                    <p class="category">Backend development</p>
+                                </div>
+                                <div class="content">
+                                    <div class="table-full-width">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox">
+                                                    </label>
+                                                </td>
+                                                <td>Sign contract for "What are conference organizers afraid of?"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox"
+                                                               checked="">
+                                                    </label>
+                                                </td>
+                                                <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox"
+                                                               checked="">
+                                                    </label>
+                                                </td>
+                                                <td>Flooded: One year later, assessing what was lost and what was found
+                                                    when a ravaging rain swept through metro Detroit
+                                                </td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox">
+                                                    </label>
+                                                </td>
+                                                <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox">
+                                                    </label>
+                                                </td>
+                                                <td>Read "Following makes Medium better"</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label class="checkbox">
+                                                        <input type="checkbox" value="" data-toggle="checkbox">
+                                                    </label>
+                                                </td>
+                                                <td>Unfollow 5 enemies from twitter</td>
+                                                <td class="td-actions text-right">
+                                                    <button type="button" rel="tooltip" title="Edit Task"
+                                                            class="btn btn-info btn-simple btn-xs">
+                                                        <i class="fa fa-edit"></i>
+                                                    </button>
+                                                    <button type="button" rel="tooltip" title="Remove"
+                                                            class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="fa fa-times"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="footer">
+                                        <hr>
+                                        <div class="stats">
+                                            <i class="fa fa-history"></i> Updated 3 minutes ago
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="col-xs-12" id="showmemberlist" style="display: none">
+            <div class="page-header">
+                <h3 id="tables">Member List <a class="btn btn-primary" style="float: right;"
+                                               (click)="pushmembers()">+</a>
+                </h3>
+
+            </div>
+
+            <table id="member" class="table table-striped table-hover table-condensed table-bordered ">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg No</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>House Name</th>
+                    <th>House No</th>
+                    <th>Father Name</th>
+                    <th>status</th>
+                    <th>status</th>
+                    <th>status</th>
+                    <th>status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let data of arraylist;let i = index">
+                    <td>{{data.name}}</td>
+                    <td>{{data.regno}}</td>
+                    <td>{{data.email}}</td>
+                    <td>{{data.mobile}}</td>
+                    <td>{{data.housename}}</td>
+                    <td>{{data.houseno}}</td>
+                    <td>{{data.fathername}}</td>
+                    <td><a (click)="print(data._id)" class="btn btn-info btn-fill btn-default">PRINT DETAIL</a></td>
+                    <td><a (click)="edit(data._id)" class="btn btn-info btn-fill btn-warning">EDIT</a></td>
+                    <td><a *ngIf="data.block" (click)="block(data._id)"
+                           class="btn btn btn-info btn-fill btn-danger">BLOCK</a>
+                        <a *ngIf="data.unblock" (click)="unblock(data._id)" class="btn btn-info btn-fill ">UNBLOCK</a></td>
+                    <td><a (click)="delete(data._id)" class="btn btn-info btn-fill ">DELETE</a></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-xs-12" id="addcustomer" style="display: none">
+            <div class="well bs-component">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <legend>Add Members</legend>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Reg No</label>
+                            <div class="col-lg-10">
+                                <input type="text" name='code' class="form-control" id="code"
+                                       placeholder="Reg No"
+                                       [(ngModel)]="regno" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">House No</label>
+                            <div class="col-lg-10">
+                                <input type="text" name='code' class="form-control" id="code"
+                                       placeholder="House No"
+                                       [(ngModel)]="houseno" required autofocus>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='name' id="name"
+                                       placeholder="Name"
+                                       [(ngModel)]="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Father name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="father name" [(ngModel)]="fathername" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">House name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="House name" [(ngModel)]="housename" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" name='email' id="email"
+                                       placeholder="email"
+                                       [(ngModel)]="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">mobile</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='phone' id="phone"
+                                       placeholder="mobile" [(ngModel)]="mobile" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">member varasangya</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='phone' id="phone"
+                                       placeholder="varasangya" [(ngModel)]="varasangya" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Landline number</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='api' id="api"
+                                       placeholder="landline number" [(ngModel)]="landlinenumber" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Last Mosque Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       value="null"
+                                       placeholder="previously enrolled mosque" [(ngModel)]="lastmosquename"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Current Mosque
+                                Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="current mosque name" [(ngModel)]="currentmosquename"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" name='password'
+                                       id="inputPassword"
+                                       placeholder="Password" [(ngModel)]="password" required>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Confirm
+                                Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" name='cpassword'
+                                       id="inputPassword2"
+                                       placeholder="Password" [(ngModel)]="cpassword" required>
+                                <p id="validate-status"></p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="textArea" class="col-lg-2 control-label">Address</label>
+                            <div class="col-lg-10">
+                                    <textarea class="form-control" rows="3" name='address' id="textArea"
+                                              [(ngModel)]="address" required></textarea>
+                                <span class="help-block">Enter the full address here</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" (click)="addmember()">Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary" (click)="submitForm()">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
+
+        <!--edit customer form-->
+        <div class="col-xs-12" id="editcustomer" style="display: none">
+            <div class="well bs-component">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <legend>Edit Members</legend>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Reg No</label>
+                            <div class="col-lg-10">
+                                <input type="text" name='code' class="form-control" id="code" placeholder="Reg No"
+                                       [(ngModel)]="regno" required autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">House No</label>
+                            <div class="col-lg-10">
+                                <input type="text" name='code' class="form-control" id="code" placeholder="House No"
+                                       [(ngModel)]="houseno" required autofocus>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='name' id="name" placeholder="Name"
+                                       [(ngModel)]="name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Father name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="father name" [(ngModel)]="fathername" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">House name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="House name" [(ngModel)]="housename" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                            <div class="col-lg-10">
+                                <input type="email" class="form-control" name='email' id="email" placeholder="email"
+                                       [(ngModel)]="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">mobile</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='phone' id="phone"
+                                       placeholder="mobile" [(ngModel)]="mobile" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">member varasangya</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='phone' id="phone"
+                                       placeholder="varasangya" [(ngModel)]="varasangya" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Landline number</label>
+                            <div class="col-lg-10">
+                                <input type="number" class="form-control" name='api' id="api"
+                                       placeholder="landline number" [(ngModel)]="landlinenumber" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Last Mosque Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode" value="null"
+                                       placeholder="previously enrolled mosque" [(ngModel)]="lastmosquename"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail" class="col-lg-2 control-label">Current Mosque Name</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" name='pincode' id="pincode"
+                                       placeholder="current mosque name" [(ngModel)]="currentmosquename" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" name='password' id="inputPassword"
+                                       placeholder="Password" [(ngModel)]="password" required>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Confirm Password</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" name='cpassword' id="inputPassword2"
+                                       placeholder="Password" [(ngModel)]="cpassword" required>
+                                <p id="validate-status"></p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="textArea" class="col-lg-2 control-label">Address</label>
+                            <div class="col-lg-10">
+                                    <textarea class="form-control" rows="3" name='address' id="textArea"
+                                              [(ngModel)]="address" required></textarea>
+                                <span class="help-block">Enter the full address here</span>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-lg-10 col-lg-offset-2">
+                                <button type="reset" class="btn btn-default" (click)="addmember();">Cancel</button>
+                                <button type="submit" class="btn btn-primary" (click)="updateForm()">Submit</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+            </div>
+        </div>
+
+
+        <div class="col-xs-12" id="showpaymentlist" style="display: none">
+            <div class="page-header">
+                <h3 id="tables">Payment List <a class="btn btn-primary" style="float: right;"
+                                               (click)="pushpayment()">+</a>
+                </h3>
+
+            </div>
+
+            <table id="member" class="table table-striped table-hover table-condensed table-bordered ">
+                <thead>
+                <tr>
+                    <th>FULL NAME</th>
+                    <th>JAN</th>
+                    <th>FEB</th>
+                    <th>MAR</th>
+                    <th>APR</th>
+                    <th>MAY</th>
+                    <th>JUN</th>
+                    <th>JUL</th>
+                    <th>AUG</th>
+                    <th>OCT</th>
+                    <th>NOV</th>
+                    <th>DEC</th>
+                    <th>EID</th>
+                    <th>EID2</th>
+                    <th>RATHIB</th>
+                    <th>MOLUD</th>
+                    <th>CHARITY</th>
+                    <th>MISC</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--<tr *ngFor="let data of arraylist;let i = index">-->
+                    <!--<td>{{data.name}}</td>-->
+                    <!--<td>{{data.regno}}</td>-->
+                    <!--<td>{{data.email}}</td>-->
+                    <!--<td>{{data.mobile}}</td>-->
+                    <!--<td>{{data.housename}}</td>-->
+                    <!--<td>{{data.houseno}}</td>-->
+                    <!--<td>{{data.fathername}}</td>-->
+                    <!--<td><a (click)="print(data._id)" class="btn btn-info btn-fill btn-default">PRINT DETAIL</a></td>-->
+                    <!--<td><a (click)="edit(data._id)" class="btn btn-info btn-fill btn-warning">EDIT</a></td>-->
+                    <!--<td><a *ngIf="data.block" (click)="block(data._id)"-->
+                           <!--class="btn btn btn-info btn-fill btn-danger">BLOCK</a>-->
+                        <!--<a *ngIf="data.unblock" (click)="unblock(data._id)" class="btn btn-info btn-fill ">UNBLOCK</a></td>-->
+                    <!--<td><a (click)="delete(data._id)" class="btn btn-info btn-fill ">DELETE</a></td>-->
+
+                <!--</tr>-->
+
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <!--<nav class="pull-left">-->
+                <!--<ul>-->
+                <!--<li>-->
+                <!--<a (click)="home()">-->
+                <!--Home-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</nav>-->
+                <!--<p class="copyright pull-right">-->
+                    <!--&copy;-->
+                    <!--<script>document.write(new Date().getFullYear())</script>-->
+                    <!--<a>Mahal App</a>, made with love for a better electronic tracking of data-->
+                <!--</p>-->
+            </div>
+        </footer>
+
+    </div>
+</div>
+
+
+

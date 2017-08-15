@@ -10,22 +10,33 @@ var server = oauth2orize.createServer();
 
 //Resource owner password
 server.exchange(oauth2orize.exchange.password(function (client, username, password, scope, done) {
-    db.collection('users').findOne({$or: [{useremail: username},{usernumber:username},{usercode:username},{mahalcode:username},{phone:username},{email:username},{mobile:username}]}, function (err, user) {
+    db.collection('users').findOne({$or: [{useremail: username}, {usernumber: username}, {usercode: username}, {mahalcode: username}, {phone: username}, {email: username}, {mobile: username}]}, function (err, user) {
         if (err) return done(err)
         if (!user) return done(null, false)
         bcrypt.compare(password, user.password, function (err, res) {
             if (!res) return done(null, false)
-            
+
             var token = utils.uid(256)
             var refreshToken = utils.uid(256)
             var tokenHash = crypto.createHash('sha1').update(token).digest('hex')
             var refreshTokenHash = crypto.createHash('sha1').update(refreshToken).digest('hex')
-            
+
             var expirationDate = new Date(new Date().getTime() + (3600 * 100000))
-        
-            db.collection('accessTokens').save({token: tokenHash, expirationDate: expirationDate, clientId: client.clientId, userId: username, scope: scope,userObjectId:user._id}, function (err) {
+
+            db.collection('accessTokens').save({
+                token: tokenHash,
+                expirationDate: expirationDate,
+                clientId: client.clientId,
+                userId: username,
+                scope: scope,
+                userObjectId: user._id
+            }, function (err) {
                 if (err) return done(err)
-                db.collection('refreshTokens').save({refreshToken: refreshTokenHash, clientId: client.clientId, userId: username}, function (err) {
+                db.collection('refreshTokens').save({
+                    refreshToken: refreshTokenHash,
+                    clientId: client.clientId,
+                    userId: username
+                }, function (err) {
                     if (err) return done(err)
                     done(null, token, refreshToken, {expires_in: expirationDate})
                 })
@@ -42,13 +53,19 @@ server.exchange(oauth2orize.exchange.refreshToken(function (client, refreshToken
         if (err) return done(err)
         if (!token) return done(null, false)
         if (client.clientId !== token.clientId) return done(null, false)
-        
+
         var newAccessToken = utils.uid(256)
         var accessTokenHash = crypto.createHash('sha1').update(newAccessToken).digest('hex')
-        
+
         var expirationDate = new Date(new Date().getTime() + (3600 * 1000))
-    
-        db.collection('accessTokens').update({userId: token.userId}, {$set: {token: accessTokenHash, scope: scope, expirationDate: expirationDate}}, function (err) {
+
+        db.collection('accessTokens').update({userId: token.userId}, {
+            $set: {
+                token: accessTokenHash,
+                scope: scope,
+                expirationDate: expirationDate
+            }
+        }, function (err) {
             if (err) return done(err)
             done(null, newAccessToken, refreshToken, {expires_in: expirationDate});
         })
@@ -57,7 +74,7 @@ server.exchange(oauth2orize.exchange.refreshToken(function (client, refreshToken
 
 // token endpoint
 exports.token = [
-    passport.authenticate(['clientBasic', 'clientPassword'], { session: false }),
+    passport.authenticate(['clientBasic', 'clientPassword'], {session: false}),
     server.token(),
     server.errorHandler()
 ]

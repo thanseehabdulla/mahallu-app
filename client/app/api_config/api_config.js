@@ -11,6 +11,7 @@ API.API_GETMAHAL = API.API_ENDPOINT + "/api/getmahal/";
 API.API_GETMEMBERS = API.API_ENDPOINT + "/api/getmembers/";
 API.API_UPDATEMAHAL = API.API_ENDPOINT + "/api/updatemahal/";
 API.API_UPDATEMEMBERS = API.API_ENDPOINT + "/api/updatemembers/";
+API.API_UPDATEMEMBERSSTATUS = API.API_ENDPOINT + "/api/updatemembersstatus/";
 API.API_REMOVEMEMBERS = API.API_ENDPOINT + "/api/removemembers/";
 API.API_REMOVEMAHAL = API.API_ENDPOINT + "/api/removemahal/";
 API.API_UPDATEPASSWORD = API.API_ENDPOINT + '/api/updatepassword';

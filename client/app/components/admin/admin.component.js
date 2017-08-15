@@ -111,13 +111,13 @@ let AdminComponent = class AdminComponent {
         this.reinitvalues();
     }
     addmember() {
-        this.homedata = "Home/Add Mahal";
+        this.homedata = "Home / Add Mahal";
         this.onNone();
         var addmahal = document.getElementById('addcustomer');
         addmahal.style.display = 'block';
     }
     changepwd() {
-        this.homedata = 'Home/Change password';
+        this.homedata = 'Home / Change password';
         this.onNone();
         var changepassword = document.getElementById('changepassword');
         changepassword.style.display = 'block';
@@ -194,6 +194,7 @@ let AdminComponent = class AdminComponent {
         console.log('reached edit');
         localStorage.setItem('tempid', id);
         this.onNone();
+        this.homedata = "Home / Edit Mahal";
         var displass = document.getElementById('editcustomer');
         displass.style.display = 'block';
         this.loadsingledata(id);
@@ -267,17 +268,23 @@ let AdminComponent = class AdminComponent {
                     }
                     console.log(error + "suggested");
                     $("#notifyss").show();
-                    setTimeout(function () { $("#notifyss").hide(); }, 5000);
+                    setTimeout(function () {
+                        $("#notifyss").hide();
+                    }, 5000);
                 });
             }
             else {
                 $("#notifyss").show();
-                setTimeout(function () { $("#notifyss").hide(); }, 5000);
+                setTimeout(function () {
+                    $("#notifyss").hide();
+                }, 5000);
             }
         }
         else {
             $("#notifyss").show();
-            setTimeout(function () { $("#notifyss").hide(); }, 5000);
+            setTimeout(function () {
+                $("#notifyss").hide();
+            }, 5000);
         }
     }
     remove(id) {
