@@ -12,6 +12,7 @@ import {CanActivateViaAuthGuard} from "./components/security/auth.guard";
 import {CanActivateViaAuthGuardAdmin} from "./components/security/auth.guard.admin";
 import {AuthService} from "./components/security/auth.service";
 import {dashboard} from "./components/Dashboard/dashboard";
+import {SelectModule} from 'ng2-select';
 
 const appRoutes: Routes = [
     {
@@ -35,7 +36,7 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-    imports: [BrowserModule, HttpModule, FormsModule, MyDatePickerModule, RouterModule.forRoot(appRoutes)],
+    imports: [SelectModule,BrowserModule, HttpModule, FormsModule, MyDatePickerModule, RouterModule.forRoot(appRoutes)],
     declarations: [dashboard, AppComponent, TasksComponent, AdminComponent, pageNotFoundComponent],
     providers: [
         AuthService,

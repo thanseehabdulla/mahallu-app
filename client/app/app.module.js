@@ -20,6 +20,7 @@ const auth_guard_1 = require("./components/security/auth.guard");
 const auth_guard_admin_1 = require("./components/security/auth.guard.admin");
 const auth_service_1 = require("./components/security/auth.service");
 const dashboard_1 = require("./components/Dashboard/dashboard");
+const ng2_select_1 = require("ng2-select");
 const appRoutes = [
     {
         path: 'admin', component: admin_component_1.AdminComponent, canActivate: [
@@ -42,7 +43,7 @@ let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, mydatepicker_1.MyDatePickerModule, router_1.RouterModule.forRoot(appRoutes)],
+        imports: [ng2_select_1.SelectModule, platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, mydatepicker_1.MyDatePickerModule, router_1.RouterModule.forRoot(appRoutes)],
         declarations: [dashboard_1.dashboard, app_component_1.AppComponent, login_component_1.TasksComponent, admin_component_1.AdminComponent, pagenotfound_component_1.pageNotFoundComponent],
         providers: [
             auth_service_1.AuthService,

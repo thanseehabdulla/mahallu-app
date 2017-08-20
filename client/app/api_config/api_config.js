@@ -9,6 +9,7 @@ API.API_ADDMAHAL = API.API_ENDPOINT + "/api/addmahal";
 API.API_ADDMEMBER = API.API_ENDPOINT + "/api/addmember";
 API.API_GETMAHAL = API.API_ENDPOINT + "/api/getmahal/";
 API.API_GETMEMBERS = API.API_ENDPOINT + "/api/getmembers/";
+API.API_GETMEMBERSREG = API.API_ENDPOINT + "/api/getmembersreg/";
 API.API_UPDATEMAHAL = API.API_ENDPOINT + "/api/updatemahal/";
 API.API_UPDATEMEMBERS = API.API_ENDPOINT + "/api/updatemembers/";
 API.API_UPDATEMEMBERSSTATUS = API.API_ENDPOINT + "/api/updatemembersstatus/";

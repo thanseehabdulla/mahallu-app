@@ -144,7 +144,14 @@ router.get('/getmembers/:id', function (req, res, next) {
     })
 });
 
-
+// single members data
+router.get('/getmembersreg/:id', function (req, res, next) {
+    // find everything
+    db.collection('users').findOne({regno: req.params.id}, function (err, results) {
+        if (err) throw err
+        res.json(results);
+    })
+});
 // update members
 
 router.put('/updatemembers/:id', function (req, res, next) {

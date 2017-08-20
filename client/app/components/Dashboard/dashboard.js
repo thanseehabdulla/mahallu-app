@@ -22,6 +22,7 @@ let dashboard = class dashboard {
     constructor(router, http) {
         this.router = router;
         this.http = http;
+        this.items = ['Eid Ul Fithr', 'Bakrid', 'charity', 'rathib', 'molud', 'miscellanous'];
     }
     reinitvalues() {
     }
@@ -157,6 +158,35 @@ let dashboard = class dashboard {
             }
         });
     }
+    loadsinglememberdata(value) {
+        console.log('load single member data');
+        let url = api_config_1.API.API_GETMEMBERSREG + value;
+        this.accesstoken = localStorage.getItem('access_token');
+        let head2 = new http_1.Headers({
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + this.accesstoken
+        });
+        this.http.get(url, {
+            headers: head2
+        })
+            .map(res => {
+            return res.json();
+        }).catch(e => {
+            if (e.status === 401) {
+                return Observable_1.Observable.throw('Unauthorized');
+            }
+        }).subscribe(data => {
+            console.log(JSON.stringify(data));
+            this.name = data.name;
+            this.address = data.address;
+            this.varasangyaamount = data.varasangya;
+            this.lastpaid = data.lastpaid;
+        }, error => {
+            if (error == "Unauthorized") {
+                console.log(error);
+            }
+        });
+    }
     initDatatable() {
         let exampleId = $('#member');
         this.tableWidget = exampleId.DataTable({
@@ -191,6 +221,10 @@ let dashboard = class dashboard {
         addmembers.style.display = 'none';
         var displass = document.getElementById('editcustomer');
         displass.style.display = 'none';
+        var addpayment = document.getElementById("addpayment");
+        addpayment.style.display = 'none';
+        var addpaymentother = document.getElementById("addpaymentother");
+        addpaymentother.style.display = 'none';
     }
     delete(id) {
         console.log('deletedata');
@@ -237,6 +271,10 @@ let dashboard = class dashboard {
         }).subscribe(data => {
             console.log(JSON.stringify(data));
             this.arraylist = Array();
+            this.memberitems = Array();
+            for (var i = 0; i < data.length; i++) {
+                this.memberitems.push(data[i].regno);
+            }
             this.arraylist = data;
             this.reInitDatatable();
         }, error => {
@@ -356,8 +394,37 @@ let dashboard = class dashboard {
     }
     paymentlist() {
         this.onNone();
+        this.loadmemberdata();
         var paymentlist = document.getElementById("showpaymentlist");
         paymentlist.style.display = 'block';
+    }
+    pushpayment() {
+        this.onNone();
+        var addpayment = document.getElementById("addpayment");
+        addpayment.style.display = 'block';
+    }
+    pushpaymentother() {
+        this.onNone();
+        var addpaymentother = document.getElementById("addpaymentother");
+        addpaymentother.style.display = 'block';
+    }
+    varasangyapay() {
+    }
+    selected(value) {
+        console.log('Selected value is: ', value);
+    }
+    refreshValue(value) {
+        console.log('refresh value is: ', value);
+    }
+    typed(value) {
+        console.log('New search input: ', value);
+    }
+    selectedmember(value) {
+        console.log('Selected value is: ', value);
+        this.loadsinglememberdata(value.text);
+    }
+    refreshValuemember(value) {
+        console.log('refresh value is: ', value);
     }
 };
 dashboard = __decorate([
@@ -365,6 +432,66 @@ dashboard = __decorate([
         moduleId: module.id,
         selector: 'dashboard',
         templateUrl: './dashboard.html',
+        styles: [`
+        .carousel{
+            overflow:hidden;
+            width:100%;
+        }
+        .slides{
+            list-style:none;
+            position:relative;
+            width:500%; /* Number of panes * 100% */
+            overflow:hidden; /* Clear floats */
+            /* Slide effect Animations*/
+            -moz-animation:carousel 30s infinite;
+            -webkit-animation:carousel 30s infinite;
+            animation:carousel 30s infinite;
+        }
+        .slides > li{
+            position:relative;
+            float:left;
+            width: 20%; /* 100 / number of panes */
+        }
+        .carousel img{
+            display:block;
+            width:100%;
+            max-width:100%;
+            height: 50%;
+        }
+        .carousel h2{
+            margin-bottom: 0;
+            font-size:1em;
+            padding:1.5em 0.5em 1.5em 0.5em;
+            position:absolute;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            text-align:center;
+            color:#fff;
+            background-color:rgba(0,0,0,0.75);
+            text-transform: uppercase;
+        }
+
+        @keyframes carousel{
+            0%    { left:-5%; }
+            11%   { left:-5%; }
+            12.5% { left:-105%; }
+            23.5% { left:-105%; }
+            25%   { left:-205%; }
+            36%   { left:-205%; }
+            37.5% { left:-305%; }
+            48.5% { left:-305%; }
+            50%   { left:-405%; }
+            61%   { left:-405%; }
+            62.5% { left:-305%; }
+            73.5% { left:-305%; }
+            75%   { left:-205%; }
+            86%   { left:-205%; }
+            87.5% { left:-105%; }
+            98.5% { left:-105%; }
+            100%  { left:-5%; }
+        }
+    `],
     }),
     __metadata("design:paramtypes", [router_1.Router, http_1.Http])
 ], dashboard);

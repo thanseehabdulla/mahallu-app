@@ -7,7 +7,6 @@ import "rxjs/add/operator/map";
 import {Observable} from "rxjs/Observable";
 import {API} from "../../api_config/api_config";
 import "jquery";
-
 import "datatables.net";
 
 
@@ -15,9 +14,71 @@ import "datatables.net";
     moduleId: module.id,
     selector: 'dashboard',
     templateUrl: './dashboard.html',
+    styles: [`
+        .carousel{
+            overflow:hidden;
+            width:100%;
+        }
+        .slides{
+            list-style:none;
+            position:relative;
+            width:500%; /* Number of panes * 100% */
+            overflow:hidden; /* Clear floats */
+            /* Slide effect Animations*/
+            -moz-animation:carousel 30s infinite;
+            -webkit-animation:carousel 30s infinite;
+            animation:carousel 30s infinite;
+        }
+        .slides > li{
+            position:relative;
+            float:left;
+            width: 20%; /* 100 / number of panes */
+        }
+        .carousel img{
+            display:block;
+            width:100%;
+            max-width:100%;
+            height: 50%;
+        }
+        .carousel h2{
+            margin-bottom: 0;
+            font-size:1em;
+            padding:1.5em 0.5em 1.5em 0.5em;
+            position:absolute;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            text-align:center;
+            color:#fff;
+            background-color:rgba(0,0,0,0.75);
+            text-transform: uppercase;
+        }
+
+        @keyframes carousel{
+            0%    { left:-5%; }
+            11%   { left:-5%; }
+            12.5% { left:-105%; }
+            23.5% { left:-105%; }
+            25%   { left:-205%; }
+            36%   { left:-205%; }
+            37.5% { left:-305%; }
+            48.5% { left:-305%; }
+            50%   { left:-405%; }
+            61%   { left:-405%; }
+            62.5% { left:-305%; }
+            73.5% { left:-305%; }
+            75%   { left:-205%; }
+            86%   { left:-205%; }
+            87.5% { left:-105%; }
+            98.5% { left:-105%; }
+            100%  { left:-5%; }
+        }
+    `],
 })
 
 export class dashboard implements OnInit {
+    public items:Array<string> = ['Eid Ul Fithr','Bakrid','charity','rathib','molud','miscellanous' ];
+    public memberitems:any
     varasangya: string;
     cpassword: any;
     housename: string;
@@ -37,6 +98,16 @@ export class dashboard implements OnInit {
     password: any;
     name: any;
     regno: any;
+    querycode:any;
+    month:any
+    total:any
+    lastpaid:any
+    varasangyaamount:any
+    paymenttype:any
+    amount:any
+
+
+
     private fathername: any;
     private options: [{ name: string }, { name: string }];
 
@@ -223,6 +294,44 @@ export class dashboard implements OnInit {
         });
     }
 
+
+    // load single datta on edit button press
+    loadsinglememberdata(value) {
+        console.log('load single member data');
+        let url = API.API_GETMEMBERSREG + value;
+        this.accesstoken = localStorage.getItem('access_token')
+        let head2 = new Headers({
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + this.accesstoken
+        });
+
+        this.http.get(url, {
+            headers: head2
+        })
+            .map(res => {
+                return res.json();
+            }).catch(e => {
+            if (e.status === 401) {
+                return Observable.throw('Unauthorized');
+            }
+            // do any other checking for statuses here
+        }).subscribe(data => {
+            console.log(JSON.stringify(data));
+
+            this.name = data.name;
+            this.address = data.address
+            this.varasangyaamount = data.varasangya
+            this.lastpaid=data.lastpaid
+
+        }, error => {
+            if (error == "Unauthorized") {
+                console.log(error);
+            }
+        });
+    }
+
+
+
     private initDatatable(): void {
 
         let exampleId: any = $('#member');
@@ -264,6 +373,10 @@ export class dashboard implements OnInit {
         addmembers.style.display = 'none'
         var displass = document.getElementById('editcustomer')
         displass.style.display = 'none';
+        var addpayment = document.getElementById("addpayment");
+        addpayment.style.display = 'none'
+        var addpaymentother = document.getElementById("addpaymentother");
+        addpaymentother.style.display = 'none'
     }
 
     delete(id) {
@@ -319,6 +432,12 @@ export class dashboard implements OnInit {
         }).subscribe(data => {
             console.log(JSON.stringify(data));
             this.arraylist = Array();
+            this.memberitems = Array<String>();
+            for (var i = 0; i < data.length; i++) {
+                this.memberitems.push(data[i].regno)
+            }
+
+
             this.arraylist = data;
             this.reInitDatatable()
         }, error => {
@@ -476,9 +595,53 @@ export class dashboard implements OnInit {
     paymentlist() {
 
         this.onNone()
+        this.loadmemberdata()
         var paymentlist = document.getElementById("showpaymentlist");
         paymentlist.style.display = 'block'
 
+    }
+
+
+    pushpayment(){
+        this.onNone()
+        var addpayment = document.getElementById("addpayment");
+        addpayment.style.display = 'block'
+    }
+
+    pushpaymentother(){
+        this.onNone()
+        var addpaymentother = document.getElementById("addpaymentother");
+        addpaymentother.style.display = 'block'
+
+    }
+
+    varasangyapay(){
+
+    }
+
+    public selected(value:any):void {
+        console.log('Selected value is: ', value);
+    }
+
+
+
+    public refreshValue(value:any):void {
+        console.log('refresh value is: ', value);
+    }
+
+    public typed(value:any):void {
+        console.log('New search input: ', value);
+    }
+
+    public selectedmember(value:any):void {
+        console.log('Selected value is: ', value);
+        this.loadsinglememberdata(value.text)
+    }
+
+
+
+    public refreshValuemember(value:any):void {
+        console.log('refresh value is: ', value);
     }
 
 }
