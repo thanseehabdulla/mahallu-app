@@ -2,52 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a39e9cc1-6ccc-4273-a574-90198e80d354" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/bundles/ng2-select.umd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/bundles/ng2-select.umd.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/bundles/ng2-select.umd.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/index.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/index.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/ng2-select.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/ng2-select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/ng2-select.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/common.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/common.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/off-click.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/off-click.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/off-click.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-interfaces.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-interfaces.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-item.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-item.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-item.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-pipes.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-pipes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select-pipes.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.module.d.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.module.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/client/node_modules/ng2-select/select/select.module.metadata.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/app/app.module.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/api_config/api_config.js" afterPath="$PROJECT_DIR$/client/app/api_config/api_config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/api_config/api_config.ts" afterPath="$PROJECT_DIR$/client/app/api_config/api_config.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.js" afterPath="$PROJECT_DIR$/client/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/app.module.ts" afterPath="$PROJECT_DIR$/client/app/app.module.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html" afterPath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.js" afterPath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts" afterPath="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package-lock.json" afterPath="$PROJECT_DIR$/client/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/package.json" afterPath="$PROJECT_DIR$/client/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/systemjs.config.js" afterPath="$PROJECT_DIR$/client/systemjs.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/task.js" afterPath="$PROJECT_DIR$/routes/task.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app/components/admin/admin.component.html" afterPath="$PROJECT_DIR$/client/app/components/admin/admin.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.html" afterPath="$PROJECT_DIR$/views/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,19 +24,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dashboard.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dashboard.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="340">
+              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
-                <marker date="1503229279851" expanded="true" signature="472:536" ph="{...}" />
-                <marker date="1503229279851" expanded="true" signature="552:913" ph="{...}" />
-                <marker date="1503229279851" expanded="true" signature="934:1052" ph="{...}" />
-                <marker date="1503229279851" expanded="true" signature="1074:1189" ph="{...}" />
-                <marker date="1503229279851" expanded="true" signature="1210:1564" ph="{...}" />
-                <marker date="1503229279851" expanded="true" signature="1593:2176" ph="..." />
+                <marker date="1503481308760" expanded="true" signature="471:535" ph="{...}" />
+                <marker date="1503481308760" expanded="true" signature="551:912" ph="{...}" />
+                <marker date="1503481308760" expanded="true" signature="933:1051" ph="{...}" />
+                <marker date="1503481308760" expanded="true" signature="1073:1188" ph="{...}" />
+                <marker date="1503481308760" expanded="true" signature="1209:1563" ph="{...}" />
+                <marker date="1503481308760" expanded="true" signature="1592:2175" ph="..." />
               </folding>
             </state>
           </provider>
@@ -93,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            <state relative-caret-position="220">
+              <caret line="11" column="67" lean-forward="true" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -106,12 +65,16 @@
       <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="163" column="32" lean-forward="false" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#7;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -119,6 +82,16 @@
                 <element signature="n#style#0;n#a#1;n#h3#0;n#div#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#5;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/app/components/admin/admin.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -143,21 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="task.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/task.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="146" column="22" lean-forward="true" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+            <state relative-caret-position="2920">
+              <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -187,10 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>oninit</find>
-      <find>commite</find>
-      <find>home(</find>
-      <find>dashboard</find>
       <find>dashboard(</find>
       <find>logout</find>
       <find>api</find>
@@ -217,9 +176,18 @@
       <find>single</find>
       <find>load</find>
       <find>memberitems</find>
+      <find>modify</find>
+      <find>status</find>
+      <find>caro</find>
+      <find>.jpg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Abdulla thanseeh &lt;thanseehabdulla@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -258,7 +226,6 @@
         <option value="$PROJECT_DIR$/routes/upload.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/client/app/components/admin/admin.component.ts" />
-        <option value="$PROJECT_DIR$/client/app/components/admin/admin.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/clientdetails/client.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/commite/commite.component.ts" />
         <option value="$PROJECT_DIR$/client/app/components/commite/commite.component.html" />
@@ -267,15 +234,16 @@
         <option value="$PROJECT_DIR$/client/app/components/login/login.component.ts" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/client/tsconfig.json" />
-        <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/client/package.json" />
         <option value="$PROJECT_DIR$/taskrunner.sh" />
         <option value="$PROJECT_DIR$/client/app/app.module.ts" />
         <option value="$PROJECT_DIR$/client/systemjs.config.js" />
         <option value="$PROJECT_DIR$/routes/task.js" />
         <option value="$PROJECT_DIR$/client/app/api_config/api_config.ts" />
-        <option value="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/client/app/components/admin/admin.component.html" />
         <option value="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts" />
+        <option value="$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html" />
+        <option value="$PROJECT_DIR$/views/index.html" />
       </list>
     </option>
   </component>
@@ -316,7 +284,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -469,6 +436,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raseelmohammed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raseelmohammed" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="api_config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -479,6 +472,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -622,12 +616,22 @@
       <workItem from="1503125318486" duration="128000" />
       <workItem from="1503199816268" duration="2382000" />
       <workItem from="1503202854954" duration="6571000" />
-      <workItem from="1503223994733" duration="5989000" />
+      <workItem from="1503223994733" duration="6359000" />
+      <workItem from="1503395360920" duration="29000" />
+      <workItem from="1503463469521" duration="4329000" />
     </task>
+    <task id="LOCAL-00001" summary="-new dashboard added&#10;-payment screen added&#10;-dashboard courser image auto loop added">
+      <created>1503231418279</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1503231418279</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62243000" />
+    <option name="totallyTimeSpent" value="66971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,13 +649,13 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25316456" sideWeight="0.49191687" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34055728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25390917" sideWeight="0.50808316" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25390917" sideWeight="0.50808316" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39910313" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25390917" sideWeight="0.50808316" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -732,6 +736,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-new dashboard added&#10;-payment screen added&#10;-dashboard courser image auto loop added" />
+    <option name="LAST_COMMIT_MESSAGE" value="-new dashboard added&#10;-payment screen added&#10;-dashboard courser image auto loop added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -896,13 +904,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/clientdetails/client.component.ts" />
     <entry file="file://$PROJECT_DIR$/client/app/components/clientdetails/client.component.html" />
-    <entry file="file://$PROJECT_DIR$/client/app/components/admin/admin.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="77" column="48" lean-forward="false" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/miscellanous/miscellanous.component.html" />
     <entry file="file://$PROJECT_DIR$/client/app/components/miscellanous/miscellanous.component.ts" />
     <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.js.map">
@@ -961,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,23 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="760">
           <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="54" column="12" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="146" column="22" lean-forward="true" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+        <state relative-caret-position="2920">
+          <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1037,14 +1020,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/client/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="2" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/admin/admin.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="85" column="46" lean-forward="false" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+            <marker date="1503481308760" expanded="true" signature="471:535" ph="{...}" />
+            <marker date="1503481308760" expanded="true" signature="551:912" ph="{...}" />
+            <marker date="1503481308760" expanded="true" signature="933:1051" ph="{...}" />
+            <marker date="1503481308760" expanded="true" signature="1073:1188" ph="{...}" />
+            <marker date="1503481308760" expanded="true" signature="1209:1563" ph="{...}" />
+            <marker date="1503481308760" expanded="true" signature="1592:2175" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="163" column="32" lean-forward="false" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="205" column="0" lean-forward="false" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#h3#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#7;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -1055,19 +1074,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/app/components/Dashboard/dashboard.ts">
+    <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="33" column="23" lean-forward="false" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <marker date="1503229279851" expanded="true" signature="472:536" ph="{...}" />
-            <marker date="1503229279851" expanded="true" signature="552:913" ph="{...}" />
-            <marker date="1503229279851" expanded="true" signature="934:1052" ph="{...}" />
-            <marker date="1503229279851" expanded="true" signature="1074:1189" ph="{...}" />
-            <marker date="1503229279851" expanded="true" signature="1210:1564" ph="{...}" />
-            <marker date="1503229279851" expanded="true" signature="1593:2176" ph="..." />
-          </folding>
+        <state relative-caret-position="220">
+          <caret line="11" column="67" lean-forward="true" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
